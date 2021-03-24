@@ -1,0 +1,33 @@
+.fixedFooter {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* ESTILOS FOOTER */
+
+.backgrFooter{
+  background-color: rgba(9, 108, 201, 0.836);
+  height: 80px;
+  
+}
+
+.socialicon{
+  color:gray;
+  font-size: 35px;
+  text-align: center;
+  padding: 15px;
+}
+
+.img-credit-card{
+  max-width: 3rem;
+  margin: 10px;
+}
+
+
+/* ESTILOS NAVBAR USER*/
+.fontNavbar {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: white !important;
+  margin-right: 2rem;
+}
