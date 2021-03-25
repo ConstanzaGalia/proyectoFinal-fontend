@@ -6,7 +6,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <div>
-      <h1>Hola Mundo</h1>
+      
       <Contact/>
     </div>
   );
