@@ -2,7 +2,7 @@ import { Carousel } from "react-bootstrap";
 
 export default function ElCarousel() {
   return (
-    <Carousel>
+    <Carousel className="m-5">
       <Carousel.Item>
         <img
           className="d-block w-100"

@@ -23,6 +23,11 @@
   margin: 10px;
 }
 
+.borderTop-div{
+  border-top: 2px solid  #6d6e70;
+  padding: 30px;
+}
+
 
 /* ESTILOS NAVBAR USER*/
 .fontNavbar {
@@ -30,4 +35,16 @@
   font-weight: bolder;
   color: white !important;
   margin-right: 2rem;
+}
+
+
+/* ESTILOS APPLEWATCH */
+.imgAppleW {
+  width: 500px;
+  height:500px;
+}
+
+/* ESTILOS SUUNTOWSTCH */
+.imgSuuntoW {
+  width: 700px;
 }
