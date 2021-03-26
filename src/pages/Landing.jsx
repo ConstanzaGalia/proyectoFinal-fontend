@@ -1,7 +1,7 @@
 
-import React from 'react'
 import ElCarousel from '../components/ElCarousel'
 import NavBar from '../components/NavBar'
+import SectionProducts from '../components/SectionProducts'
 
 
 export default function Landing() {
@@ -9,6 +9,7 @@ export default function Landing() {
     <>
       <NavBar />
       <ElCarousel />
+      <SectionProducts />
     </>
   )
 }
