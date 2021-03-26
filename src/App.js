@@ -9,6 +9,7 @@ import SobreNosotros from './pages/SobreNosotros';
 import Productos from './pages/Productos';
 import ServicioTecnico from './pages/ServicioTecnico';
 import Contacto from './pages/Contacto';
+import AdminProductos from './components/AdminProductos';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Switch>
           <Route path='/admin'>
             <Admin />
+            <AdminProductos />
           </Route>
           <Route path='/nosotros'>
             <SobreNosotros />
