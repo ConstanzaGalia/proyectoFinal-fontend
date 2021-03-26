@@ -20,7 +20,7 @@ export default function SamsungW() {
         <ReactPlayer
           url='https://www.youtube.com/watch?v=P4YuzFSIbJM&ab_channel=Samsung'
           className='react-player'
-          playing='true'
+          playing
           width='600px'
           height='400px'
         />
