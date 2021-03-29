@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
 import imgcontact from "../Img/Contact_page.jpg";
 import Card from "react-bootstrap/Card";
+import '../css/Contact.css'
 
 export default function Contact() {
   return (
@@ -15,43 +16,53 @@ export default function Contact() {
     
       <Image src={imgcontact} fluid />
 
-
     <Container >
+    <h1  align="center">Contáctanos</h1>
     <div className="d-flex flex-wrap mt-5 justify-content-between">
-    <Card style={{ width: '14rem' }} >
+    <Card style={{ width: '15rem' }} >
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+        <Card.Title>Llámanos</Card.Title>
+        
         <Card.Text>
-          Some quick example text to build on the card title and make up the bulk of
-          the card's content.
+        Tucumán: 0800-0101
+        <br></br>
+        Córdoba: 0800-1-726-7864
+        <br></br>
+        Buenos Aires: 0800-5077267
+        <br></br>
+        Salta: 0800-279-19111
+        <br></br>
+        Misiones: 0800-0726-7864
+        <br></br>
+        Mendoza: 0800-299-0033
+        <br></br>
+        Chubut: 0800-751-2676
+        <br></br>
+        Atención de 8:00 a 23:00 Hrs, Lunes a Domingo
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+
       </Card.Body>
     </Card>
-    <Card style={{ width: '14rem' }}>
+    <Card style={{ width: '15rem' }}>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+        <Card.Title>Soporte presencial</Card.Title>
+        
         <Card.Text>
-          Some quick example text to build on the card title and make up the bulk of
-          the card's content.
+        Localiza los centros de servicio O´Tech más cercanos.
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#"><Button variant="dark">Clic Aquí</Button>{' '}</Card.Link>
+        
       </Card.Body>
     </Card>
-    <Card style={{ width: '14rem' }}>
+    <Card style={{ width: '15rem' }}>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+        <Card.Title>Tienda online O´Tech</Card.Title>
+   
         <Card.Text>
-          Some quick example text to build on the card title and make up the bulk of
-          the card's content.
+        Compra en línea los más novedosos smartphones, tablets, wearables y accesorios O´Tech.
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#"><Button variant="dark">Clic Aquí</Button>{' '}</Card.Link>
+
       </Card.Body>
     </Card>
     </div>
