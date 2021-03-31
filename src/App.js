@@ -8,7 +8,7 @@ import Admin from './pages/Admin';
 import SobreNosotros from './pages/SobreNosotros';
 import Productos from './pages/Productos';
 import ServicioTecnico from './pages/ServicioTecnico';
-import Contacto from './pages/Contacto';
+import Contact from './pages/Contact';
 
 
 
@@ -30,7 +30,7 @@ function App() {
             <ServicioTecnico />
           </Route>
           <Route path='/contacto'>
-            <Contacto />
+            <Contact />
           </Route>
           <Route path='/'>
             <Landing  />
