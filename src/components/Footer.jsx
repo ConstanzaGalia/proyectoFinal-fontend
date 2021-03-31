@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <div className="container-fluid mt-auto mx-auto borderTop-div">
-            <h5 className="text-center">Siguenos</h5>
+            <h5 className="text-center mt-4">Siguenos</h5>
             <div className="row justify-content-center my-3">
                 <i className="fab fa-facebook-square socialicon"></i>
                 <i className="fab fa-instagram socialicon"></i>
