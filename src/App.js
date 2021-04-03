@@ -11,6 +11,8 @@ import ServicioTecnico from './pages/ServicioTecnico';
 import Contact from './pages/Contact';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import AdminProductos from './components/AdminProductos';
+import FormProducto from './pages/FormProducts';
 
 
 
@@ -43,12 +45,16 @@ function App() {
         <Switch>
           <Route path='/admin'>
             <Admin />
+            <AdminProductos />
           </Route>
           <Route path='/nosotros'>
             <SobreNosotros />
           </Route>
           <Route path='/productos'>
             <Productos />
+          </Route>
+          <Route path='/formProducto'>
+            <FormProducto />
           </Route>
           <Route path='/servicio'>
             <ServicioTecnico />
