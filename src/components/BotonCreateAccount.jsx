@@ -6,19 +6,19 @@ import axios from "axios";
 
 
 
-export default function BotonCreateAccount( {token, user, setToken} ) {
+export default function BotonCreateAccount( { setToken } ) {
     const [show, setShow] = useState(false);
     const [validated, setValidated] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [showAlert, setShowAlert] = useState(false);
-    const [input, setInput] = useState({nombreApellido: '', email:'', password:''});
+    const [input, setInput] = useState({nombre: '', email:'', password:''});
 
 
     const handleSubmit = async (e) =>{
         const form = e.currentTarget;
-        e.preventDefault();
         setValidated(true);
+        e.preventDefault();
         if (form.checkValidity() === false) {
             return e.stopPropagation();
         }
@@ -34,6 +34,7 @@ export default function BotonCreateAccount( {token, user, setToken} ) {
         }
 
         setShowAlert(true);
+        setValidated(false);
         e.target.reset();
         setTimeout(function () {
             handleClose();
@@ -43,8 +44,7 @@ export default function BotonCreateAccount( {token, user, setToken} ) {
     
     
     const handleChange = (e) => {
-        const value = e.target.value;
-        const name = e.target.name;
+        const { name, value } = e.target;
         const user = { ...input, [name]: value };
         setInput(user);
     }
@@ -63,7 +63,7 @@ export default function BotonCreateAccount( {token, user, setToken} ) {
                         <Form.Group controlId="validationCustom01">
                             <Form.Label>Nombre y Apellido</Form.Label>
                             <Form.Control 
-                            name="nombreApellido" 
+                            name="nombre" 
                             type="text" 
                             required 
                             placeholder="Ingrese su nombre y apellido" 

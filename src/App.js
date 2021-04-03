@@ -13,6 +13,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import AdminProductos from './components/AdminProductos';
 import FormProducto from './pages/FormProducts';
+import Profile from './pages/Profile';
 
 
 
@@ -43,6 +44,9 @@ function App() {
     <div className="fixedFooter">
       <Router>
         <Switch>
+        <Route path='/profile'>
+            <Profile />
+          </Route>
           <Route path='/admin'>
             <Admin />
             <AdminProductos />

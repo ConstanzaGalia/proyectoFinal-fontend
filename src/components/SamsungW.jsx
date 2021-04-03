@@ -1,4 +1,3 @@
-import ReactPlayer from 'react-player'
 
 export default function SamsungW() {
   return (
@@ -17,13 +16,7 @@ export default function SamsungW() {
             Además, tenés una gran variedad de correas a tu disposición para combinar con todos tus estilos</p>
         </div>
         <div className="col-md-6">
-        <ReactPlayer
-          url='https://www.youtube.com/watch?v=P4YuzFSIbJM&ab_channel=Samsung'
-          className='react-player'
-          playing='false'
-          width='600px'
-          height='400px'
-        />
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/P4YuzFSIbJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
