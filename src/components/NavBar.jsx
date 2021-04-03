@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import BotonCreateAccount from "./BotonCreateAccount"
 import BotonInicioSesion from "./BotonInicioSesion"
 
-export default function NavBar() {
+export default function NavBar( {token, user, setToken} ) {
     return (
         <div>
             <Navbar bg="dark" expand="lg">
@@ -15,7 +15,7 @@ export default function NavBar() {
                         <Nav.Link className="fontNavbar" as={NavLink} to='/servicio'>Servicio Técnico</Nav.Link>
                         <Nav.Link className="fontNavbar" as={NavLink} to='/contacto'>Contacto</Nav.Link>
                     </Nav>
-                <BotonCreateAccount />
+                <BotonCreateAccount token={token} user={user} setToken={ setToken }/>
                 <BotonInicioSesion />
                 </Navbar.Collapse>
             </Navbar>

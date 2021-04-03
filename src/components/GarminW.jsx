@@ -27,7 +27,7 @@ export default function GarminW() {
           <ReactPlayer
             url="https://www.youtube.com/watch?v=U7bEVQndGFg&t=1s&ab_channel=GarminEMEA"
             className="react-player"
-            playing
+            playing='false'
             width="600px"
             height="400px"
           />

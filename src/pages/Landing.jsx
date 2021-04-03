@@ -9,10 +9,10 @@ import GarminW from '../components/GarminW'
 
 
 
-export default function Landing() {
+export default function Landing( {token, user, setToken} ) {
   return (
     <>
-      <NavBar />
+      <NavBar token={token} user={user} setToken={setToken}/>
       <ElCarousel />
       <SectionProducts />
       <AppleWatch />

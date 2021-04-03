@@ -9,10 +9,34 @@ import SobreNosotros from './pages/SobreNosotros';
 import Productos from './pages/Productos';
 import ServicioTecnico from './pages/ServicioTecnico';
 import Contact from './pages/Contact';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 
 
 function App() {
+
+  const [token, setToken] = useState(localStorage.getItem('token'));
+    const [user, setUser] = useState({});
+
+    useEffect(() => {
+        if (token) {
+            getApi();
+        }
+    }, [token]);
+
+    const getApi = async () => {
+        try {
+            const headers = { 'x-auth-token': token };
+            const { data } = await axios.get('http://localhost:4000/api/usuarios/usuarioLogueado', {
+                headers,
+            });
+            setUser(data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
   return (
     <div className="fixedFooter">
       <Router>
@@ -33,7 +57,7 @@ function App() {
             <Contact />
           </Route>
           <Route path='/'>
-            <Landing  />
+            <Landing user={ user } token={ token } setToken={ setToken }  />
           </Route>
         </Switch>
         <Footer />
