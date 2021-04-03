@@ -1,7 +1,7 @@
 import { Form, Modal, Alert, InputGroup } from "react-bootstrap";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-import {getStorageArray, setStorage} from '../utils';
+import { setStorage } from '../utils';
 import axios from "axios";
 
 
@@ -18,13 +18,14 @@ export default function BotonCreateAccount( {token, user, setToken} ) {
     const handleSubmit = async (e) =>{
         const form = e.currentTarget;
         e.preventDefault();
+        setValidated(true);
         if (form.checkValidity() === false) {
             return e.stopPropagation();
         }
-        setValidated(true);
 
         try {
             const { data } = await axios.post('http://localhost:4000/api/usuarios', input);
+            console.log(data)
             setStorage('token', data);
             setToken(data);
             window.location.replace('/');
@@ -37,7 +38,7 @@ export default function BotonCreateAccount( {token, user, setToken} ) {
         setTimeout(function () {
             handleClose();
             setShowAlert(false);
-        }, 1500);
+        }, 2000);
     }
     
     
