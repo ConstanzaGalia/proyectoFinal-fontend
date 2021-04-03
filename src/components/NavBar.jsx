@@ -14,6 +14,7 @@ export default function NavBar() {
                         <Nav.Link className="fontNavbar" as={NavLink} to='/productos'>Productos</Nav.Link>
                         <Nav.Link className="fontNavbar" as={NavLink} to='/servicio'>Servicio Técnico</Nav.Link>
                         <Nav.Link className="fontNavbar" as={NavLink} to='/contacto'>Contacto</Nav.Link>
+                        <Nav.Link className="fontNavbar" as={NavLink} to='/formProducto'>Publicar producto</Nav.Link>
                     </Nav>
                 <BotonCreateAccount />
                 <BotonInicioSesion />

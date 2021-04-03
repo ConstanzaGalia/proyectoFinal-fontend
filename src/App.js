@@ -10,6 +10,7 @@ import Productos from './pages/Productos';
 import ServicioTecnico from './pages/ServicioTecnico';
 import Contacto from './pages/Contacto';
 import AdminProductos from './components/AdminProductos';
+import FormProducto from './pages/FormProducts';
 
 
 
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path='/productos'>
             <Productos />
+          </Route>
+          <Route path='/formProducto'>
+            <FormProducto />
           </Route>
           <Route path='/servicio'>
             <ServicioTecnico />
