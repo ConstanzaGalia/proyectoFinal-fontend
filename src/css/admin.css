@@ -1,13 +1,12 @@
 .sideBar {
   height: 709px;
   width: 300px;
-  background-color: rgb(50, 65, 88);
-  border-right: 3px black solid;
+  background-color:#343a40;
 }
 .sidebar-buttons {
   width: 300px;
   border-radius: 0;
   color: white;
-  border-color: black;
-  border-width: 3px;
+  border-color: rgb(248, 248, 248);
+  padding: 20px;
 }
