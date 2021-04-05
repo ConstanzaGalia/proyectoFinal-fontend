@@ -28,7 +28,7 @@
 }
 
 
-/* ESTILOS NAVBAR USER*/
+/* ESTILOS NAVBAR */
 .navbar-style{
   min-height: 150px;
 }
@@ -40,7 +40,10 @@
   margin-right: 2rem;
 }
 
-
+.logoImg {
+  height: 150px;
+  width: 150px;
+}
 
 /* ESTILOS APPLEWATCH */
 .imgAppleW {

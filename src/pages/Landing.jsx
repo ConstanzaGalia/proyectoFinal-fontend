@@ -9,6 +9,7 @@ import GarminW from '../components/GarminW'
 
 
 
+
 export default function Landing( {token, user, setToken} ) {
   return (
     <>

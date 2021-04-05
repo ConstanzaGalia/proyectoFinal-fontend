@@ -1,18 +1,15 @@
 import { Button } from "react-bootstrap";
 import { Form, Modal, Alert, InputGroup } from "react-bootstrap";
 import { useState } from "react";
-import {getStorageArray, setStorage} from '../utils';
-import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 
 
-export default function BotonInicioSesion({ setToken }) {
+export default function BotonInicioSesion({ setToken, user}) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const history = useHistory();
     const [showAlert, setShowAlert] = useState(false);
     const [showAdmin, setShowAdmin] = useState(false);
 
@@ -38,7 +35,6 @@ export default function BotonInicioSesion({ setToken }) {
             const { data } = await axios.post('http://localhost:4000/api/auth/login', input);
             localStorage.setItem('token', data);
             setToken(data);
-            window.location.replace('/');
         } catch (error) {
             console.log(error);
         }

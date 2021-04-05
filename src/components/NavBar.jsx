@@ -1,11 +1,13 @@
 import {
   Dropdown,
+  Image,
   Nav,
   Navbar,
 } from "react-bootstrap";
 import { Link, NavLink, useHistory } from "react-router-dom";
 import BotonCreateAccount from "./BotonCreateAccount";
 import BotonInicioSesion from "./BotonInicioSesion";
+import Logo from '../Img/LogoBlanco.png';
 
 export default function NavBar({ token, user, setToken }) {
   const history = useHistory();
@@ -18,6 +20,9 @@ export default function NavBar({ token, user, setToken }) {
   return (
     <div>
       <Navbar bg="dark" expand="lg" className="navbar-style">
+          <Link to='/'>
+          <Image src={Logo} className="logoImg ml-5"/>
+          </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
@@ -37,7 +42,7 @@ export default function NavBar({ token, user, setToken }) {
           {!token && (
             <>
               <BotonCreateAccount setToken={setToken} />
-              <BotonInicioSesion setToken={setToken} />
+              <BotonInicioSesion setToken={setToken} user={user} />
             </>
           )}
           {token && (
