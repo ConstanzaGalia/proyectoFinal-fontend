@@ -6,6 +6,7 @@ import imgcontact from "../Img/Contact_page.jpg";
 import Card from "react-bootstrap/Card";
 import '../css/Contact.css'
 
+
 export default function Contact() {
   return (
     <>
@@ -66,30 +67,35 @@ export default function Contact() {
       </Card.Body>
     </Card>
     </div>
+    <div className="mt-5" >
+      <h3 align="center">Envianos un mensaje para obtener Asistencia General</h3>
+    </div>
     <Form className="mt-5">
+      <Form.Group controlId="Nombre y Apellido">
+        <Form.Label>Nombre y Apellido</Form.Label>
+        <Form.Control type="text" placeholder="Nombre y Apellido" />
+      </Form.Group>
       <Form.Group controlId="exampleForm.ControlInput1">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label>Email</Form.Label>
         <Form.Control type="email" placeholder="name@example.com" />
       </Form.Group>
       <Form.Group controlId="exampleForm.ControlSelect1">
-        <Form.Label>Example select</Form.Label>
+        <Form.Label>Tipo de Consulta</Form.Label>
         <Form.Control as="select">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+          <option>Web-site</option>
+          <option>Empleo</option>
+          <option>Consulta</option>
         </Form.Control>
       </Form.Group>
       <Form.Group controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Example textarea</Form.Label>
+        <Form.Label>Mensaje</Form.Label>
         <Form.Control as="textarea" rows={3} />
       </Form.Group>
       <Form.Group controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        <Form.Check type="checkbox" label="Si usted es un cliente B2B, por favor marque la casilla" />
       </Form.Group>
       <Button variant="primary" type="submit">
-        Submit
+        Enviar
       </Button>
     </Form>
     </Container>
