@@ -1,6 +1,7 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import AdmNavtop from "../components/AdmNavtop";
-import AdmProducts from "../components/AdmProducts";
+import CreateProducts from "../components/CreateProducts";
+import AdmProductsList from "../components/AdmProductsList";
 import AdmSidebar from "../components/AdmSidebar";
 import AdmUsers from "../components/AdmUsers";
 import '../css/admin.css';
@@ -20,7 +21,10 @@ export default function Admin({token, user}) {
             <AdmUsers token={token} />
           </Route>
           <Route path='/admin/products'>
-            <AdmProducts />
+            <CreateProducts token={ token } />
+          </Route>
+          <Route path='/admin/productslist'>
+            <AdmProductsList />
           </Route>
           </Switch>
 

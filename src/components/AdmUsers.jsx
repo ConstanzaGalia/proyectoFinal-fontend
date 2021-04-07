@@ -16,7 +16,7 @@ export default function AdmUsers({token}) {
   return (
     <div className="container my-3">
         <h1>Usuarios</h1>
-        
+
         <Table striped bordered hover responsive>
               <thead>
                 <tr>

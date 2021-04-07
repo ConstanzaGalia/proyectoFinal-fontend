@@ -58,9 +58,6 @@ function App() {
           <Route path='/productos'>
             <Productos user={ user } token={ token } setToken={ setToken } />
           </Route>
-          <Route path='/formProducto'>
-            <FormProducto />
-          </Route>
           <Route path='/servicio'>
             <ServicioTecnico user={ user } token={ token } setToken={ setToken } />
           </Route>

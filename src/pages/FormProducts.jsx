@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Row, Button } from "react-bootstrap";
-import NavBar from "../components/NavBar";
 import axios from "axios";
 
 export default function FormProducts({ token }) {
@@ -15,10 +14,12 @@ export default function FormProducts({ token }) {
       return event.stopPropagation();
     }
     try {
+      console.log("🚀 ~ file: FormProducts.jsx ~ line 19 ~ handleSubmit ~ input", input)
       const headers = { "x-auth-token": token };
-      await axios.post("http://localhost:4000/api/productos", input, {
+      const response = await axios.post("http://localhost:4000/api/products", input, {
         headers,
       });
+      console.log("🚀 ~ file: FormProducts.jsx ~ line 21 ~ handleSubmit ~ response", response)
       alert("¡Producto publicado!");
     } catch (error) {
       console.log(error);
@@ -33,14 +34,12 @@ export default function FormProducts({ token }) {
 
   return (
     <>
-      <NavBar />
-      <div className="container my-5 ">
-      <h2 className="text-center">Alta de productos</h2>
+      <div className="container my-5">
         <Form noValidate validated={validated} onSubmit={handleSubmit} className="card mt-5 p-5">
           <Form.Group controlId="validationCustom02">
             <Form.Label>Nombre</Form.Label>
             <Form.Control
-              name="titulo"
+              name="name"
               onChange={(e) => handleChange(e)}
               required
               type="text"
@@ -52,7 +51,7 @@ export default function FormProducts({ token }) {
           <Form.Group controlId="validationCustom02">
             <Form.Label>Imagen</Form.Label>
             <Form.Control
-              name="imagen"
+              name="image"
               onChange={(e) => handleChange(e)}
               required
               type="text"
@@ -64,7 +63,7 @@ export default function FormProducts({ token }) {
           <Form.Group controlId="validationCustom02">
             <Form.Label>Marca</Form.Label>
             <Form.Control
-              name="marca"
+              name="brand"
               onChange={(e) => handleChange(e)}
               required
               type="text"
@@ -76,7 +75,7 @@ export default function FormProducts({ token }) {
           <Form.Group controlId="validationCustom02">
             <Form.Label>Categoría</Form.Label>
             <Form.Control
-              name="categoría"
+              name="category"
               onChange={(e) => handleChange(e)}
               required
               type="text"
@@ -88,7 +87,7 @@ export default function FormProducts({ token }) {
           <Form.Group controlId="validationCustom02">
             <Form.Label>Precio</Form.Label>
             <Form.Control
-              name="precio"
+              name="price"
               onChange={(e) => handleChange(e)}
               required
               type="number"
@@ -100,7 +99,7 @@ export default function FormProducts({ token }) {
           <Form.Group controlId="validationCustom02">
             <Form.Label>Descripción</Form.Label>
             <Form.Control
-              name="descripcion"
+              name="description"
               onChange={(e) => handleChange(e)}
               required
               type="text"
