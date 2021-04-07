@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import AdmNavtop from "../components/AdmNavtop";
 import AdmProducts from "../components/AdmProducts";
 import AdmSidebar from "../components/AdmSidebar";
@@ -6,7 +6,10 @@ import AdmUsers from "../components/AdmUsers";
 import '../css/admin.css';
 
 
-export default function Admin() {
+export default function Admin({token, user}) {
+  if (!token || user.rol === 'cliente') {
+    return <Redirect to="/" />
+  }
   return (
     <>
       <AdmNavtop />

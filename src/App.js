@@ -45,26 +45,26 @@ function App() {
       <Router>
         <Switch>
         <Route path='/profile'>
-            <Profile />
+            <Profile user={ user } token={ token } setToken={ setToken }/>
           </Route>
           <Route path='/admin'>
-            <Admin />
+            <Admin user={ user } token={ token } />
             <AdminProductos />
           </Route>
           <Route path='/nosotros'>
-            <SobreNosotros />
+            <SobreNosotros user={ user } token={ token } setToken={ setToken }/>
           </Route>
           <Route path='/productos'>
-            <Productos />
+            <Productos user={ user } token={ token } setToken={ setToken } />
           </Route>
           <Route path='/formProducto'>
             <FormProducto />
           </Route>
           <Route path='/servicio'>
-            <ServicioTecnico />
+            <ServicioTecnico user={ user } token={ token } setToken={ setToken } />
           </Route>
           <Route path='/contacto'>
-            <Contact />
+            <Contact user={ user } token={ token } setToken={ setToken } />
           </Route>
           <Route path='/'>
             <Landing user={ user } token={ token } setToken={ setToken }  />

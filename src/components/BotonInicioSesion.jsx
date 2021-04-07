@@ -2,6 +2,7 @@ import { Button } from "react-bootstrap";
 import { Form, Modal, Alert, InputGroup } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
+import { setStorage } from "../utils";
 
 
 
@@ -33,34 +34,14 @@ export default function BotonInicioSesion({ setToken, user}) {
         }
         try {
             const { data } = await axios.post('http://localhost:4000/api/auth/login', input);
-            localStorage.setItem('token', data);
+            console.log("🚀 ~ file: BotonInicioSesion.jsx ~ line 36 ~ handleSubmit ~ data", data)
+            setStorage('token', data);
             setToken(data);
         } catch (error) {
             console.log(error);
         }
 
 
-        // if (findUser) {
-        //     setStorage('userLogged', findUser);
-        //     setShowAlert(true);
-        //     e.target.reset();
-
-        //     setTimeout(function () {
-        //         handleClose();
-        //         setShowAlert(false);
-        //         history.push('/user')
-        //     }, 1500);
-
-        // } else if (adminLogin){
-        //     setShowAdmin(true);
-        //     e.target.reset();
-
-        //     setTimeout(function () {
-        //         handleClose();
-        //         setShowAdmin(false);
-        //         history.push('/admin')
-        //     }, 1500);
-        // }
     }
 
     return (
@@ -73,8 +54,8 @@ export default function BotonInicioSesion({ setToken, user}) {
                 </Modal.Header>
                 <Modal.Body>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                        {showAlert && <Alert variant={'success'}>¡Inicio de sesión exitoso! 🤩</Alert>}
-                        {showAdmin && <Alert variant={'info'}>¡Bienvenido Administrador! 🤩</Alert>}
+                        {/* {showAlert && <Alert variant={'success'}>¡Inicio de sesión exitoso! 🤩</Alert>}
+                        {showAdmin && <Alert variant={'info'}>¡Bienvenido Administrador! 🤩</Alert>} */}
                         <Form.Group controlId="validationCustom02">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control 

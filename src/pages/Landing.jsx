@@ -10,7 +10,9 @@ import GarminW from '../components/GarminW'
 
 
 
+
 export default function Landing( {token, user, setToken} ) {
+  
   return (
     <>
       <NavBar token={token} user={user} setToken={setToken}/>

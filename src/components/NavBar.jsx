@@ -4,13 +4,20 @@ import {
   Nav,
   Navbar,
 } from "react-bootstrap";
-import { Link, NavLink, useHistory } from "react-router-dom";
+import { Link, NavLink, useHistory, Redirect } from "react-router-dom";
 import BotonCreateAccount from "./BotonCreateAccount";
 import BotonInicioSesion from "./BotonInicioSesion";
 import Logo from '../Img/LogoBlanco.png';
 
 export default function NavBar({ token, user, setToken }) {
+  
   const history = useHistory();
+  
+  if (user.rol === 'admin') {
+    return <Redirect to='/admin' />
+  }
+
+
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
@@ -47,7 +54,7 @@ export default function NavBar({ token, user, setToken }) {
           )}
           {token && (
             <>
-              <Dropdown className="mr-5">
+              <Dropdown className="btnDropDown">
                 <Dropdown.Toggle variant="info" id="dropdown-basic">
                 {user.nombre}
                 </Dropdown.Toggle>

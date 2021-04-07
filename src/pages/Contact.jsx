@@ -6,11 +6,11 @@ import Card from "react-bootstrap/Card";
 import '../css/Contact.css'
 import NavBar from "../components/NavBar";
 
-export default function Contact() {
+export default function Contact({token, user, setToken}) {
   return (
     <>
     
-      <NavBar />
+      <NavBar token={token} user={user} setToken={setToken}/>
     
       <Image src={imgcontact} fluid />
 

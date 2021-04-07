@@ -28,18 +28,11 @@ export default function BotonCreateAccount( { setToken } ) {
             console.log(data)
             setStorage('token', data);
             setToken(data);
-            window.location.replace('/');
         } catch (error) {
             console.log(error);
         }
 
-        setShowAlert(true);
-        setValidated(false);
-        e.target.reset();
-        setTimeout(function () {
-            handleClose();
-            setShowAlert(false);
-        }, 2000);
+        
     }
     
     

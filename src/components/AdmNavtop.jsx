@@ -1,5 +1,10 @@
 
 export default function AdmNavtop() {
+
+    const handleLogOut = () => {
+        localStorage.removeItem("token");
+        window.location.reload();
+    };
   return (
     <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom p-5">
@@ -21,7 +26,8 @@ export default function AdmNavtop() {
                         </li>
                     </ul>
                 </div>
-                <a href='/' className="btn btn-secondary btn-back-login"><i className="fas fa-sign-out-alt"></i></a>
+
+                <button onClick={handleLogOut} className="btn btn-secondary btn-back-login"><i className="fas fa-sign-out-alt"></i></button>
             </nav>
     </div>
   )
