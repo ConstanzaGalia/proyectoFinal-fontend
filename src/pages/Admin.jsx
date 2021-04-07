@@ -17,7 +17,7 @@ export default function Admin({token, user}) {
         <AdmSidebar />
           <Switch>
           <Route path='/admin/users'>
-            <AdmUsers />
+            <AdmUsers token={token} />
           </Route>
           <Route path='/admin/products'>
             <AdmProducts />

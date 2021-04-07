@@ -2,11 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 
-export default function AdmUsers() {
+export default function AdmUsers({token}) {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const getUsers = async () => {
-      const { data } = await axios.get('http://localhost:4000/api/usuarios');
+      const headers = {'x-auth-token': token}
+      const { data } = await axios.get('http://localhost:4000/api/usuarios', {headers});
       setUsers(data);
     };
     getUsers();
@@ -15,10 +16,10 @@ export default function AdmUsers() {
   return (
     <div className="container my-3">
         <h1>Usuarios</h1>
+        
         <Table striped bordered hover responsive>
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>Nombre</th>
                   <th>Email</th>
                   <th>Rol</th>
@@ -27,9 +28,8 @@ export default function AdmUsers() {
               <tbody>
                 {
                   users.map((u)=>(
-                    <tr>
-                      <td key={u._id}>1</td>
-                      <td> {u.Nombre} </td>
+                    <tr key={u._id}>
+                      <td> {u.nombre} </td>
                       <td> {u.email} </td>
                       <td> {u.rol} </td>
                     </tr>

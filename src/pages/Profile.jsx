@@ -16,7 +16,6 @@ export default function Profile({token, user, setToken}) {
     const img = e.target.files[0];
     if (!beforeUpload(img)) return;
     const base64 = await getBase64(img);
-    // setImage(base64);
     console.log('onChangeImg - base64', base64);
     axios
         .put(
