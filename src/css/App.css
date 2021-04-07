@@ -28,7 +28,11 @@
 }
 
 
-/* ESTILOS NAVBAR USER*/
+/* ESTILOS NAVBAR */
+.navbar-style{
+  min-height: 150px;
+}
+
 .fontNavbar {
   font-size: 1.3rem;
   font-weight: bolder;
@@ -36,7 +40,14 @@
   margin-right: 2rem;
 }
 
+.logoImg {
+  height: 150px;
+  width: 150px;
+}
 
+.btnDropDown {
+  margin-right: 6rem;
+}
 /* ESTILOS APPLEWATCH */
 .imgAppleW {
   width: 500px;

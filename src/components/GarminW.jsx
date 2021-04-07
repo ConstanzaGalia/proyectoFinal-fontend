@@ -1,4 +1,3 @@
-import ReactPlayer from "react-player";
 
 export default function GarminW() {
   return (
@@ -24,13 +23,7 @@ export default function GarminW() {
         </div>
 
         <div className="col-md-6">
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=U7bEVQndGFg&t=1s&ab_channel=GarminEMEA"
-            className="react-player"
-            playing='false'
-            width="600px"
-            height="400px"
-          />
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/U7bEVQndGFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>

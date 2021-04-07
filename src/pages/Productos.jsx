@@ -1,13 +1,11 @@
 import React from 'react'
-import NavBar from "../components/NavBar";
+import NavBar from '../components/NavBar'
 
-export default function Productos() {
+export default function Productos({token, user, setToken}) {
   return (
-    <>
-    <NavBar />
-      <div>
-        <h1>Productos</h1>
-      </div>
-    </>
+    <div>
+      <NavBar token={token} user={user} setToken={setToken}/>
+      <h1>Productos</h1>
+    </div>
   )
 }

@@ -2,10 +2,10 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import "../css/sobreNosotros.css";
 
-export default function SobreNosotros() {
+export default function SobreNosotros({token, user, setToken}) {
   return (
     <>
-      <NavBar />
+      <NavBar token={token} user={user} setToken={setToken}/>
       <div className="container my-5 ">
         <h2 className="text-center">Sobre Nosotros</h2>
         <div className="d-flex flex-wrap mt-3 justify-content-center">

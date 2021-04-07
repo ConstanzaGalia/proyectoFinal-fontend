@@ -12,6 +12,9 @@ import Contact from './pages/Contact';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import AdminProductos from './components/AdminProductos';
+import FormProducto from './pages/FormProducts';
+import Profile from './pages/Profile';
+
 
 
 
@@ -42,21 +45,24 @@ function App() {
     <div className="fixedFooter">
       <Router>
         <Switch>
+        <Route path='/profile'>
+            <Profile user={ user } token={ token } setToken={ setToken }/>
+          </Route>
           <Route path='/admin'>
-            <Admin token={ token } />
+            <Admin user={ user } token={ token } />
             <AdminProductos />
           </Route>
           <Route path='/nosotros'>
-            <SobreNosotros />
+            <SobreNosotros user={ user } token={ token } setToken={ setToken }/>
           </Route>
           <Route path='/productos'>
-            <Productos />
+            <Productos user={ user } token={ token } setToken={ setToken } />
           </Route>
           <Route path='/servicio'>
-            <ServicioTecnico />
+            <ServicioTecnico user={ user } token={ token } setToken={ setToken } />
           </Route>
           <Route path='/contacto'>
-            <Contact />
+            <Contact user={ user } token={ token } setToken={ setToken } />
           </Route>
           <Route path='/'>
             <Landing user={ user } token={ token } setToken={ setToken }  />
