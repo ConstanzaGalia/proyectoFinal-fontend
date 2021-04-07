@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import "./sobreNosotros.css";
+import "../css/sobreNosotros.css";
 
 export default function SobreNosotros() {
   return (

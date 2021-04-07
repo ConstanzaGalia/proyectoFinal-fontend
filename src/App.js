@@ -12,7 +12,6 @@ import Contact from './pages/Contact';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import AdminProductos from './components/AdminProductos';
-import FormProducto from './pages/FormProducts';
 
 
 
@@ -44,7 +43,7 @@ function App() {
       <Router>
         <Switch>
           <Route path='/admin'>
-            <Admin />
+            <Admin token={ token } />
             <AdminProductos />
           </Route>
           <Route path='/nosotros'>
@@ -52,9 +51,6 @@ function App() {
           </Route>
           <Route path='/productos'>
             <Productos />
-          </Route>
-          <Route path='/formProducto'>
-            <FormProducto />
           </Route>
           <Route path='/servicio'>
             <ServicioTecnico />

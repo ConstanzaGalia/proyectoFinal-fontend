@@ -1,9 +1,14 @@
 import React from 'react'
 
+import NavBar from "../components/NavBar";
+
 export default function ServicioTecnico() {
   return (
-    <div>
-      <h1>Servicio Técnico</h1>
-    </div>
+    <>
+    <NavBar />
+      <div>
+        <h1>Servicio Técnico</h1>
+      </div>
+    </>
   )
 }

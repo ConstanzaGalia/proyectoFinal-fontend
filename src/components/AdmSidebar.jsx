@@ -7,7 +7,10 @@ export default function AdmSidebar() {
       <div className="sideBar d-flex flex-column">
             <div className="abr-my h-100">
                 <div className="d-flex justify-content-center align-items-center h-25">
-                    <Button as={NavLink} to='/admin/products' variant="dark" className="sidebar-buttons">Productos</Button>
+                    <Button as={NavLink} to='/admin/products' variant="dark" className="sidebar-buttons">Alta de Productos</Button>
+                </div>
+                <div className="d-flex justify-content-center align-items-center h-25">
+                    <Button as={NavLink} to='/admin/productslist' variant="dark" className="sidebar-buttons">Listado de productos</Button>
                 </div>
                 <div className="d-flex justify-content-center align-items-center h-25">
                     <Button as={NavLink} to='/admin/users' variant="dark" className="sidebar-buttons">Usuarios</Button>
