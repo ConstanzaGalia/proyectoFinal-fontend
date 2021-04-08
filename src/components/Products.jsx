@@ -1,32 +1,25 @@
-import React from 'react'
-import NavBar from '../components/NavBar'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import CardProducts from '../components/CardProducts';
+import Product from './Product';
 import { Container, Row } from 'react-bootstrap';
 
-
-export default function Products( {token, user, setToken} ) {
+export default function Products() {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         const getProducts = async () => {
             const { data } = await axios.get('http://localhost:4000/api/products');
             setProducts(data);
-            console.log("🚀 ~ file: Productos.jsx ~ line 15 ~ getProducts ~ data", products)
         };
         getProducts();
     }, []);
 
     return (
-    <>
-      <NavBar token={token} user={user} setToken={setToken} />
         <Container className="my-5">
-            <Row className="flex-row justify-content-center">
+            <Row className="flex-column justify-content-center">
                 {products.map((p) => (
-                    <CardProducts product={p} key={p._id} />
+                    <Product Product={p} key={p._id} />
                 ))}
             </Row>
         </Container>
-    </>
     );
 }

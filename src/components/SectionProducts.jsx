@@ -6,10 +6,10 @@ export default function SectionProducts() {
     <div className="container my-5">
         <GrupoBotones />
       <div className="row">
+        {/* <CardProducts />
         <CardProducts />
         <CardProducts />
-        <CardProducts />
-        <CardProducts />
+        <CardProducts /> */}
       </div>
     
     </div>
