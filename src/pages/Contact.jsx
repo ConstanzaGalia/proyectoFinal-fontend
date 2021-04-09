@@ -1,4 +1,5 @@
-import React from "react";
+import {useState} from "react";
+import axios from "axios";
 import { Button, Container, Form } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import imgcontact from "../Img/Contact_page.jpg";
@@ -7,6 +8,33 @@ import "../css/Contact.css";
 import NavBar from "../components/NavBar";
 
 export default function Contact({token, user, setToken}) {
+  const [validated, setValidated] = useState(false);
+  const [input, setInput] = useState({});
+  const handleSubmit = async (event) => {
+    const form = event.currentTarget;
+    event.preventDefault();
+    setValidated(true);
+    if (form.checkValidity() === false) {
+      return event.stopPropagation();
+    }
+    try {
+      console.log("🚀 ~ file: FormProducts.jsx ~ line 19 ~ handleSubmit ~ input", input)
+      const headers = { "x-auth-token": token };
+      const response = await axios.post("http://localhost:4000/api/mensajes", input, {
+        headers,
+      });
+      console.log("🚀 ~ file: FormProducts.jsx ~ line 21 ~ handleSubmit ~ response", response)
+      alert("Mensaje enviado.");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    const changedInput = { ...input, [name]: value };
+    setInput(changedInput);
+  };
   return (
     <>
     
@@ -71,18 +99,18 @@ export default function Contact({token, user, setToken}) {
             Envianos un mensaje para obtener Asistencia General
           </h3>
         </div>
-        <Form className="mt-5">
+        <Form noValidate validated={validated} className="mt-5 mb-5" onSubmit={handleSubmit}>
           <Form.Group controlId="Nombre y Apellido">
             <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="text" placeholder="Nombre y Apellido" />
+            <Form.Control type="text" placeholder="Nombre y Apellido" name="nombre"  onChange={handleChange}/>
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="name@example.com" />
+            <Form.Control type="email" placeholder="name@example.com" name="email" onChange={handleChange} />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Label>Tipo de Consulta</Form.Label>
-            <Form.Control as="select">
+            <Form.Control as="select" name="tipo" onChange={handleChange}>
               <option>Web-site</option>
               <option>Empleo</option>
               <option>Consulta</option>
@@ -90,7 +118,7 @@ export default function Contact({token, user, setToken}) {
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Mensaje</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+            <Form.Control as="textarea" rows={3} name="contenido" onChange={handleChange}/>
           </Form.Group>
           <Form.Group controlId="formBasicCheckbox">
             <Form.Check
