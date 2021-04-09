@@ -25,7 +25,7 @@ export default function Admin({token, user}) {
             <CreateProducts token={ token } />
           </Route>
           <Route path='/admin/productslist'>
-            <AdmProductsList />
+            <AdmProductsList token={ token } />
           </Route>
           <Route path='/admin/messages'>
             <AdmMessages />
