@@ -19,19 +19,21 @@ export default function AdmUsers({token}) {
 
         <Table striped bordered hover responsive>
               <thead>
-                <tr>
+                <tr className="text-center">
                   <th>Nombre</th>
                   <th>Email</th>
                   <th>Rol</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
                 {
                   users.map((u)=>(
                     <tr key={u._id}>
-                      <td> {u.nombre} </td>
-                      <td> {u.email} </td>
-                      <td> {u.rol} </td>
+                      <td className="text-center"> {u.nombre} </td>
+                      <td className="text-center"> {u.email} </td>
+                      <td className="text-center"> {u.rol} </td>
+                      <td className="text-center"> <button type="button" class="btn btn-danger mr-2"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="fas fa-edit"></i></button></td>
                     </tr>
                   ))
                 }

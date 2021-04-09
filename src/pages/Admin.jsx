@@ -4,6 +4,7 @@ import CreateProducts from "../components/CreateProducts";
 import AdmProductsList from "../components/AdmProductsList";
 import AdmSidebar from "../components/AdmSidebar";
 import AdmUsers from "../components/AdmUsers";
+import AdmMessages from "../components/AdmMessages"
 import '../css/admin.css';
 
 
@@ -25,6 +26,9 @@ export default function Admin({token, user}) {
           </Route>
           <Route path='/admin/productslist'>
             <AdmProductsList />
+          </Route>
+          <Route path='/admin/messages'>
+            <AdmMessages />
           </Route>
           </Switch>
 

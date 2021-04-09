@@ -15,6 +15,9 @@ export default function AdmSidebar() {
                 <div className="d-flex justify-content-center align-items-center h-25">
                     <Button as={NavLink} to='/admin/users' variant="dark" className="sidebar-buttons">Usuarios</Button>
                 </div>
+                <div className="d-flex justify-content-center align-items-center h-25">
+                    <Button as={NavLink} to='/admin/messages' variant="dark" className="sidebar-buttons">Mensajes</Button>
+                </div>
             </div>
         </div>
     </div>

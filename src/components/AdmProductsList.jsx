@@ -19,23 +19,25 @@ export default function AdmProductsList({token}) {
 
         <Table striped bordered hover responsive>
               <thead>
-                <tr>
+                <tr className="text-center">
                   <th>Nombre</th>
                   <th>Marca</th>
                   <th>Categoría</th>
                   <th>Precio</th>
                   <th>Descripción</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
                 {
                   users.map((p)=>(
                     <tr key={p._id}>
-                      <td> {p.name} </td>
-                      <td> {p.brand} </td>
-                      <td> {p.category} </td>
-                      <td> {p.price} </td>
-                      <td> {p.description} </td>
+                      <td className="text-center"> {p.name} </td>
+                      <td className="text-center"> {p.brand} </td>
+                      <td className="text-center"> {p.category} </td>
+                      <td className="text-center"> {p.price} </td>
+                      <td className="text-center"> {p.description} </td>
+                      <td className="text-center"> <button type="button" class="btn btn-danger mr-2"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="fas fa-edit"></i></button></td>
                     </tr>
                   ))
                 }
