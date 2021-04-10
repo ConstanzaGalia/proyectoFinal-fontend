@@ -10,9 +10,9 @@ export default function CardProducts( {product} ) {
           <Card.Title>{product.name}</Card.Title>
           <Card.Text>
             {product.description}
-            {product.price}
           </Card.Text>
-          <Button variant="secondary">Comprar</Button>
+          <Button variant="secondary mr-2">Comprar</Button>
+          <Button variant="outline-secondary" disabled> ${product.price} </Button>
         </Card.Body>
       </Card>
     </div>

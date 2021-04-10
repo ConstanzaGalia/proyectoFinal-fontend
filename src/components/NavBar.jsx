@@ -26,21 +26,21 @@ export default function NavBar({ token, user, setToken }) {
   };
   return (
     <div>
-      <Navbar bg="dark" expand="lg" className="navbar-style">
+      <Navbar expand="lg" className="navbar-style">
           <Link to='/'>
           <Image src={Logo} className="logoImg ml-5"/>
           </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
+            <Nav.Link className="fontNavbar" as={NavLink} to="/">
+              Inicio
+            </Nav.Link>
             <Nav.Link className="fontNavbar" as={NavLink} to="/nosotros">
               Sobre Nosotros
             </Nav.Link>
             <Nav.Link className="fontNavbar" as={NavLink} to="/productos">
               Productos
-            </Nav.Link>
-            <Nav.Link className="fontNavbar" as={NavLink} to="/servicio">
-              Servicio Técnico
             </Nav.Link>
             <Nav.Link className="fontNavbar" as={NavLink} to="/contacto">
               Contacto

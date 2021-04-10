@@ -1,3 +1,9 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 .fixedFooter {
   min-height: 100vh;
   display: flex;
@@ -31,10 +37,12 @@
 /* ESTILOS NAVBAR */
 .navbar-style{
   min-height: 150px;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
 }
 
 .fontNavbar {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   color: white !important;
   margin-right: 2rem;
@@ -47,7 +55,45 @@
 
 .btnDropDown {
   margin-right: 6rem;
+  background-color: white;
 }
+
+.btnStyle1 {
+  background-color:white;
+  border-color: white;
+  color: black;
+  margin: 5px;
+}
+
+.btnStyle1:hover {
+  background-color:gray;
+  border-color: gray;
+}
+
+.btnStyle2 {
+  background-color:gray;
+  border-color: gray;
+}
+
+.btnStyle2:hover {
+  background-color:white;
+  border-color: white;
+  color: black;
+}
+
+.titulos {
+  font-family: 'Train One', cursive;
+  font-size: 40px;
+}
+
+.fontP {
+  font-size:18px
+}
+
+.sectionProduct {
+  background-image: url(https://image.freepik.com/foto-gratis/pared-ladrillo-negro-textura-fondo_53876-63572.jpg);
+}
+
 /* ESTILOS APPLEWATCH */
 .imgAppleW {
   width: 500px;
@@ -57,4 +103,10 @@
 /* ESTILOS SUUNTOWSTCH */
 .imgSuuntoW {
   width: 700px;
+}
+
+
+/* ESTILOS PROFILE*/
+.hr-style {
+  border: 5px solid
 }

@@ -33,8 +33,9 @@ export default function Profile({token, user, setToken}) {
     <>
       <NavBar token={token} user={user} setToken={setToken} />
       <div className="container text-center">
-        <h3 className="my-5">Mi Perfil: {user.nombre} </h3>
-        <div className="d-flex justify-content-center align-items-end ml-4 m-2">
+        <h3 className='my-5'>Perfil de Cliente</h3>
+            <div className=" ml-4 m-2">
+                <label htmlFor="file-input" style={{ cursor: 'pointer' }}>
                 <img
                     src={user.imagen || exampleImage}
                     alt="profile"
@@ -42,11 +43,16 @@ export default function Profile({token, user, setToken}) {
                     className="rounded-circle"
                     style={{ border: '2px solid black' }}
                 />
-                <label htmlFor="file-input" style={{ cursor: 'pointer' }}>
-                <i class="far fa-edit"></i>
                 </label>
+                <h3 className="my-5"> {user.nombre} </h3>
+                <h5 className="my-5"> {user.email} </h5>
                 <input id="file-input" className="d-none" accept="image/png, image/jpeg" type="file" onChange={onChangeImg}/>
             </div>
+
+            <hr className="my-5 hr-style"/>
+
+            <h3 className="my-5">Mi lista de Favoritos</h3>
+
       </div>
     </>
   )

@@ -41,7 +41,6 @@ export default function AdmProductsList({ token, product }) {
   };
 
   const handleSubmit = async (e) => {
-    console.log("algo ja");
     const form = e.currentTarget;
     setValidated(true);
     e.preventDefault();
