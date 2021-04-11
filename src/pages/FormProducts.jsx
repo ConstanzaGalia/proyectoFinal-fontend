@@ -21,6 +21,8 @@ export default function FormProducts({ token }) {
       });
       console.log("🚀 ~ file: FormProducts.jsx ~ line 21 ~ handleSubmit ~ response", response)
       alert("¡Producto publicado!");
+      
+
     } catch (error) {
       console.log(error);
     }
@@ -104,6 +106,7 @@ export default function FormProducts({ token }) {
               required
               type="text"
               placeholder="Descripción"
+              max-length="150"
             />
             <Form.Control.Feedback>¡Luce bien!</Form.Control.Feedback>
           </Form.Group>
