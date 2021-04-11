@@ -75,7 +75,11 @@ export default function Contact({token, user, setToken}) {
               <Card.Text>
                 Localiza los centros de servicio O´Tech más cercanos.
               </Card.Text>
-              <Card.Link href="#">
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <Card.Link href="/nosotros">
                 <Button variant="dark">Clic Aquí</Button>{" "}
               </Card.Link>
             </Card.Body>
@@ -88,7 +92,10 @@ export default function Contact({token, user, setToken}) {
                 Compra en línea los más novedosos smartphones, tablets,
                 wearables y accesorios O´Tech.
               </Card.Text>
-              <Card.Link href="#">
+              <br></br>
+              <br></br>
+              <br></br>
+              <Card.Link href="/">
                 <Button variant="dark">Clic Aquí</Button>{" "}
               </Card.Link>
             </Card.Body>
