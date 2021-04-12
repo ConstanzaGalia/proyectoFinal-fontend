@@ -46,7 +46,7 @@ export default function BotonInicioSesion({ setToken, user}) {
 
     return (
         <div>
-            <Button className="my-5 float-right btnStyle2" onClick={handleShow}>Iniciar Sesión</Button>
+            <Button className="btnStyle2" onClick={handleShow}>Iniciar Sesión</Button>
 
             <Modal show={show} onHide={handleClose} >
                 <Modal.Header closeButton>

@@ -43,8 +43,8 @@ export default function BotonCreateAccount( { setToken } ) {
     }
 
     return (
-        <div>
-            <Button className="my-5 btnStyle1" onClick={handleShow} >Crear Cuenta</Button>
+        <>
+            <Button className=" btnStyle1" onClick={handleShow} >Crear Cuenta</Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -100,7 +100,7 @@ export default function BotonCreateAccount( { setToken } ) {
                     </Button>
                 </Modal.Footer>
             </Modal>
-        </div>
+        </>
 
     )
 }

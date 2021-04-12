@@ -96,13 +96,34 @@ body {
 
 /* ESTILOS APPLEWATCH */
 .imgAppleW {
-  width: 500px;
-  height:500px;
+  width: 100%;
 }
 
 /* ESTILOS SUUNTOWSTCH */
 .imgSuuntoW {
-  width: 700px;
+  width: 100%;
+}
+
+.videoYoutube{
+  height: 400px;
+  width: 650px;
+}
+
+/* TITULOS Y SUBTIULOS LANDING */
+/* ESTILOS APPLEWATCH */
+.imgAppleW {
+  width: 100%;
+}
+
+.iconApple{
+  color:black;
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+/* ESTILOS SUUNTOWSTCH */
+.imgSuuntoW {
+  width: 100%;
 }
 
 
@@ -111,9 +132,61 @@ body {
   border: 5px solid
 }
 
-@media (min-width: 768px) {
+.titulosLanding {
+  font-family: 'Jockey One', sans-serif;
+  font-size: 50px;
+}
+
+.subtitulosLanding {
+  font-family: 'Jockey One', sans-serif;
+  font-size: 40px;
+}
+
+.parrafoLanding{
+  font-family: 'Pavanam', sans-serif;
+  font-size: 20px;
+}
+
+.videoYoutube {
+  width: 600px;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+
+  .videoYoutube{
+    width:100%;
+  }
+
+  .titulosLanding {
+    font-size: 35px;
+  }
+  
+  .subtitulosLanding {
+    font-size: 25px;
+  }
+  
+  .parrafoLanding{
+    font-size: 15px;
+  }
+
+}
+
+/* ESTILOS PROFILE*/
+.hr-style {
+  border: 5px solid
+}
+
+@media (max-width: 768px) {
   .backgrFooter{
     height: 130px;
     font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoYoutube{
+    width: 100%;
   }
 }

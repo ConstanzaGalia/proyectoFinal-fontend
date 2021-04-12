@@ -1,8 +1,8 @@
 
 export default function AppleWatch() {
   return (
-    <div className="container my-5">
-      <div className="row">
+    <div className="container-fluid my-5">
+      <div className="row m-3">
       <div className="col-md-6">
           <img className="imgAppleW " src="https://ipoint.com.ar/img/cms/productos-home/watch-products-row-2020.png" alt=""/>
         </div>

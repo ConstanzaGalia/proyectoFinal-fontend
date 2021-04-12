@@ -6,7 +6,7 @@ import garmin from '../Img/garmin.png'
 
 export default function ElCarousel() {
   return (
-    <Carousel className="m-5">
+    <Carousel className="">
       <Carousel.Item>
         <Image src={apple} className="d-block w-100" />
       </Carousel.Item>
