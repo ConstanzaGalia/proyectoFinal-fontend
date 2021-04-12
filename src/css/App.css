@@ -12,9 +12,9 @@ body {
 /* ESTILOS FOOTER */
 
 .backgrFooter{
-  background-color: rgba(9, 108, 201, 0.836);
-  height: 80px;
-  
+  background-color: black;
+  color: white;
+  height: 100px;
 }
 
 .socialicon{
@@ -25,7 +25,7 @@ body {
 }
 
 .img-credit-card{
-  max-width: 3rem;
+  max-width: 2.5rem;
   margin: 10px;
 }
 
@@ -96,18 +96,13 @@ body {
 
 /* ESTILOS APPLEWATCH */
 .imgAppleW {
-  width: 100%;
-}
-
-.iconApple{
-  color:black;
-  font-size: 50px;
-  margin-right: 10px;
+  width: 500px;
+  height:500px;
 }
 
 /* ESTILOS SUUNTOWSTCH */
 .imgSuuntoW {
-  width: 100%;
+  width: 700px;
 }
 
 
@@ -116,42 +111,9 @@ body {
   border: 5px solid
 }
 
-.titulosLanding {
-  font-family: 'Jockey One', sans-serif;
-  font-size: 50px;
-}
-
-.subtitulosLanding {
-  font-family: 'Jockey One', sans-serif;
-  font-size: 40px;
-}
-
-.parrafoLanding{
-  font-family: 'Pavanam', sans-serif;
-  font-size: 20px;
-}
-
-.videoYoutube {
-  width: 600px;
-  height: 400px;
-}
-
-@media (max-width: 768px) {
-
-  .videoYoutube{
-    width:100%;
+@media (min-width: 768px) {
+  .backgrFooter{
+    height: 130px;
+    font-size: 1rem;
   }
-
-  .titulosLanding {
-    font-size: 35px;
-  }
-  
-  .subtitulosLanding {
-    font-size: 25px;
-  }
-  
-  .parrafoLanding{
-    font-size: 15px;
-  }
-
 }
