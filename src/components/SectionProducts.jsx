@@ -27,7 +27,7 @@ export default function Products( {token, user, setToken} ) {
             <Row className="flex-row justify-content-center">
                 {products.map((p) => (
                     <CardProducts product={p} key={p._id} />
-                ))}
+                )).slice(0,8)}
             </Row>
             <Row>
                 <Link to='/'>

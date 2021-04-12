@@ -110,3 +110,10 @@ body {
 .hr-style {
   border: 5px solid
 }
+
+@media (min-width: 768px) {
+  .backgrFooter{
+    height: 130px;
+    font-size: 1rem;
+  }
+}
