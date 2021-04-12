@@ -34,8 +34,8 @@ export default function FormProducts({ token }) {
 
   return (
     <>
-      <div className="container my-5">
-        <Form noValidate validated={validated} onSubmit={handleSubmit} className="card mt-5 p-5">
+      <div className="container">
+        <Form noValidate validated={validated} onSubmit={handleSubmit} className="card m-1 p-5">
           <Form.Group controlId="validationCustom02">
             <Form.Label>Nombre</Form.Label>
             <Form.Control
@@ -108,7 +108,7 @@ export default function FormProducts({ token }) {
             <Form.Control.Feedback>¡Luce bien!</Form.Control.Feedback>
           </Form.Group>
           <Row>
-            <Button type="submit" className="mx-auto">
+            <Button type="submit" className="btn btn-info mx-auto">
               Publicar producto
             </Button>
           </Row>

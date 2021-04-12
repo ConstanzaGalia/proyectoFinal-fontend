@@ -90,23 +90,59 @@ body {
   font-size:18px
 }
 
+
+/* SECCIONES PRODUCTOS */
+
 .sectionProduct {
   background-image: url(https://image.freepik.com/foto-gratis/pared-ladrillo-negro-textura-fondo_53876-63572.jpg);
 }
 
+.productsTitle {
+  background-image: url(../Img/tituloproductos.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backproducts {
+  background-image: url(https://image.freepik.com/foto-gratis/pared-ladrillo-negro-textura-fondo_53876-63572.jpg);
+}
+
+
+
+/* NAV PANEL ADMIN */
+.navpaneladmin {
+  background-image: url(../Img/navpaneladmin.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sideBar {
+  background-image: url(../Img/sidepaneladmin.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
 /* ESTILOS APPLEWATCH */
+
 .imgAppleW {
   width: 500px;
   height:500px;
 }
 
+
+
 /* ESTILOS SUUNTOWSTCH */
+
 .imgSuuntoW {
   width: 700px;
 }
 
 
+
 /* ESTILOS PROFILE*/
+
 .hr-style {
   border: 5px solid
 }

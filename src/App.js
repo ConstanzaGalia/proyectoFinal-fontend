@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import Admin from './pages/Admin';
 import SobreNosotros from './pages/SobreNosotros';
 import Productos from './pages/Productos';
-import ServicioTecnico from './pages/ServicioTecnico';
 import Contact from './pages/Contact';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
