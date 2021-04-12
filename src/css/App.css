@@ -12,9 +12,9 @@ body {
 /* ESTILOS FOOTER */
 
 .backgrFooter{
-  background-color: rgba(9, 108, 201, 0.836);
-  height: 80px;
-  
+  background-color: black;
+  color: white;
+  height: 100px;
 }
 
 .socialicon{
@@ -25,7 +25,7 @@ body {
 }
 
 .img-credit-card{
-  max-width: 3rem;
+  max-width: 2.5rem;
   margin: 10px;
 }
 

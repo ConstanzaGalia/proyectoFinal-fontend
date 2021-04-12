@@ -101,6 +101,12 @@ export default function Contact({token, user, setToken}) {
             </Card.Body>
           </Card>
         </div>
+          <h5 className="text-center mt-4">Seguinos en nuestras redes</h5>
+            <div className="row justify-content-center my-3">
+                <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square socialicon"></i></a>
+                <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram socialicon"></i></a>
+                <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter socialicon"></i></a>
+            </div>
         <div className="mt-5">
           <h3 align="center">
             Envianos un mensaje para obtener Asistencia General
@@ -109,15 +115,15 @@ export default function Contact({token, user, setToken}) {
         <Form noValidate validated={validated} className="mt-5 mb-5" onSubmit={handleSubmit}>
           <Form.Group controlId="Nombre y Apellido">
             <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="text" placeholder="Nombre y Apellido" name="nombre"  onChange={handleChange}/>
+            <Form.Control type="text" placeholder="Nombre y Apellido" name="nombre" required  onChange={handleChange}/>
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="name@example.com" name="email" onChange={handleChange} />
+            <Form.Control type="email" placeholder="name@example.com" name="email" required onChange={handleChange} />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Label>Tipo de Consulta</Form.Label>
-            <Form.Control as="select" name="tipo" onChange={handleChange}>
+            <Form.Control as="select" name="tipo" required onChange={handleChange}>
               <option>Web-site</option>
               <option>Empleo</option>
               <option>Consulta</option>
@@ -125,15 +131,9 @@ export default function Contact({token, user, setToken}) {
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Mensaje</Form.Label>
-            <Form.Control as="textarea" rows={3} name="contenido" onChange={handleChange}/>
+            <Form.Control as="textarea" rows={3} name="contenido" required  onChange={handleChange}/>
           </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check
-              type="checkbox"
-              label="Si usted es un cliente B2B, por favor marque la casilla"
-            />
-          </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button className="btnStyle2" type="submit">
             Enviar
           </Button>
         </Form>
