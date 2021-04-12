@@ -35,6 +35,13 @@ body {
 
 
 /* ESTILOS NAVBAR */
+
+.botonHamburguesa {
+  color: white !important;
+  background-color: white !important;
+  border-color: white !important;
+}
+
 .navbar-style{
   min-height: 150px;
   font-family: 'Roboto', sans-serif;

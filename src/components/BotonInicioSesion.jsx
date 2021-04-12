@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import { Form, Modal, Alert, InputGroup } from "react-bootstrap";
+import { Form, Modal, InputGroup } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 import { setStorage } from "../utils";
@@ -10,10 +10,6 @@ export default function BotonInicioSesion({ setToken, user}) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    const [showAlert, setShowAlert] = useState(false);
-    const [showAdmin, setShowAdmin] = useState(false);
-
 
     const [input, setInput] = useState({ email: '', password: '' });
 
@@ -54,8 +50,6 @@ export default function BotonInicioSesion({ setToken, user}) {
                 </Modal.Header>
                 <Modal.Body>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                        {/* {showAlert && <Alert variant={'success'}>¡Inicio de sesión exitoso! 🤩</Alert>}
-                        {showAdmin && <Alert variant={'info'}>¡Bienvenido Administrador! 🤩</Alert>} */}
                         <Form.Group controlId="validationCustom02">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control 

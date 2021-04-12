@@ -1,4 +1,4 @@
-import { Form, Modal, Alert, InputGroup } from "react-bootstrap";
+import { Form, Modal, InputGroup } from "react-bootstrap";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { setStorage } from '../utils';
@@ -11,7 +11,6 @@ export default function BotonCreateAccount( { setToken } ) {
     const [validated, setValidated] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState({nombre: '', email:'', password:''});
 
 
@@ -52,7 +51,6 @@ export default function BotonCreateAccount( { setToken } ) {
                 </Modal.Header>
                 <Modal.Body>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                            {showAlert && <Alert variant={'success'}>¡Su registro se realizó con éxito! 🤩</Alert>}
                         <Form.Group controlId="validationCustom01">
                             <Form.Label>Nombre y Apellido</Form.Label>
                             <Form.Control 

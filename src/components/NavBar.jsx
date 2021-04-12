@@ -30,7 +30,7 @@ export default function NavBar({ token, user, setToken }) {
           <Link to='/'>
           <Image src={Logo} className="logoImg ml-5"/>
           </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="botonHamburguesa" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link className="fontNavbar" as={NavLink} to="/">
