@@ -12,6 +12,8 @@ import Contact from './pages/Contact';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Profile from './pages/Profile';
+import SNC from './components/SNC'
+
 
 
 
