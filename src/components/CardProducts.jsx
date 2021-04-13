@@ -49,7 +49,7 @@ export default function CardProducts( {product} ) {
             <strong>Precio:</strong> {product.price}
           </div>
 
-          <div className="border-bottom border-top p-4">
+          <div className="border-bottom border-top p-4 text-justify">
             <strong>Descripción:</strong> {product.description}
           </div>
         </Modal.Body>
