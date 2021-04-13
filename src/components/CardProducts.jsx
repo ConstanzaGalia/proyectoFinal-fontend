@@ -18,8 +18,8 @@ export default function CardProducts( {product} ) {
             <Button variant="outline-secondary" className="w-100" disabled> ${product.price}</Button>
           </div>
           <div className="">
-            <Button variant="secondary" className="w-50">Comprar</Button>
-            <Button variant="info" className="w-50" onClick={handleShow}>
+            <Button variant="info" className="w-50">Comprar</Button>
+            <Button variant="secondary" className="w-50" onClick={handleShow}>
               Mostrar
             </Button>
           </div>

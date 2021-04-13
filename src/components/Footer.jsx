@@ -52,10 +52,10 @@ export default function Footer() {
                     </a>
                 </div>
                 <div className="row">
-                    <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square socialicon"></i></a>
-                    <a href="https://www.instagram.com/rollingcodeschool/?hl=es-la" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram socialicon"></i></a>
-                    <a href="https://twitter.com/rollingcodeok?lang=es" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter socialicon"></i></a>
-                    <a href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt socialicon"></i></a>
+                    <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square socialicon socialiconfooter"></i></a>
+                    <a href="https://www.instagram.com/rollingcodeschool/?hl=es-la" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram socialicon socialiconfooter"></i></a>
+                    <a href="https://twitter.com/rollingcodeok?lang=es" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter socialicon socialiconfooter"></i></a>
+                    <a href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt socialicon socialiconfooter"></i></a>
                 </div>
                 <div className="d-flex flex-column align-items-center">
                     <p>
