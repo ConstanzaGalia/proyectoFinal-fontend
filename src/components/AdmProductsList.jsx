@@ -101,12 +101,12 @@ export default function AdmProductsList({ token, product }) {
                   <i class="fas fa-trash-alt"></i>
                 </button>
 
-                <button onClick={() => updateProduct(p)} type="button" class="btn btn-outline-info">
+                <button onClick={() => updateProduct(p)} type="button" class="btn btn-outline-secondary">
                   <i class="fas fa-edit"></i>
                 </button>
 
                 <button onClick={() => showProductModal(p)} type="button" class="btn btn-outline-info">
-                  <i class="fas fa-edit"></i>
+                <i class="fas fa-archive"></i>
                 </button>
 
               </td>
@@ -203,7 +203,7 @@ export default function AdmProductsList({ token, product }) {
               <Form.Control.Feedback>¡Luce bien!</Form.Control.Feedback>
             </Form.Group>
             <Row>
-              <Button type="submit" className="mx-auto">
+              <Button type="submit" className="mx-auto btn-info">
                 Editar producto
               </Button>
             </Row>
@@ -222,24 +222,33 @@ export default function AdmProductsList({ token, product }) {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
-          <Modal.Title>{editProduct.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <Card.Img src={editProduct.image} />
-          {editProduct.description}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseProduct}>
-            Close
-          </Button>
-          <Button variant="primary">Understood</Button>
-        </Modal.Footer>
-      </Modal>
+      <Modal.Header closeButton>
+        <Modal.Title>{editProduct.name}</Modal.Title>
+      </Modal.Header>
+      <Card.Img src={editProduct.image} />
+      <Modal.Body className="d-flex flex-column">
+        <div className="border-bottom border-top mb-3 p-4">
+          <strong>Marca:</strong> {editProduct.brand}
+        </div>
 
+        <div className="border-bottom border-top mb-3 p-4">
+          <strong>Categoría:</strong> {editProduct.category}
+        </div>
 
-    
-      
-    </div>
+        <div className="border-bottom border-top mb-3 p-4">
+          <strong>Precio:</strong> {editProduct.price}
+        </div>
+
+        <div className="border-bottom border-top p-4 text-justify">
+          <strong>Descripción:</strong> {editProduct.description}
+        </div>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="info" onClick={handleCloseProduct}>
+          Cerrar
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  </div>
   );
 }
