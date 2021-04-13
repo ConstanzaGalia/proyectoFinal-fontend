@@ -14,7 +14,7 @@ export default function SobreNosotros({token, user, setToken}) {
         <h2 className="text-center">Sobre Nosotros</h2>
         <div className="">
 
-          <div className="mt-5">
+          <div className="mt-5 text-justify">
             <p>
             O´Tech se compromete a cumplir las leyes y regulaciones locales y a aplicar un código de conducta mundial estricto para todos nuestros empleados. Creemos que la administración 
             ética no es solo una herramienta para hacer frente a los rápidos cambios del entorno comercial mundial, sino que también sirve como vehículo para desarrollar la confianza 

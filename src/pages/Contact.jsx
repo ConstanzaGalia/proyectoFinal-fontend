@@ -47,7 +47,7 @@ export default function Contact({token, user, setToken}) {
         <div className="d-flex flex-wrap mt-5 justify-content-between">
           <Card style={{ width: "15rem" }}>
             <Card.Body>
-              <Card.Title>Llámanos</Card.Title>
+              <Card.Title>Teléfonos</Card.Title>
 
               <Card.Text>
                 Tucumán: 0800-0101
@@ -73,39 +73,40 @@ export default function Contact({token, user, setToken}) {
               <Card.Title>Soporte presencial</Card.Title>
 
               <Card.Text>
-                Localiza los centros de servicio O´Tech más cercanos.
+                Localiza los centros de servicio O'Tech más cercanos.
               </Card.Text>
               <br></br>
               <br></br>
               <br></br>
               <br></br>
-              <Card.Link href="/nosotros">
-                <Button variant="dark">Clic Aquí</Button>{" "}
+              <Card.Link href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018">
+                <Button variant="info">Clic Aquí</Button>{" "}
               </Card.Link>
             </Card.Body>
           </Card>
           <Card style={{ width: "15rem" }}>
             <Card.Body>
-              <Card.Title>Tienda online O´Tech</Card.Title>
+              <Card.Title>Tienda online O'Tech</Card.Title>
 
               <Card.Text>
                 Compra en línea los más novedosos smartphones, tablets,
-                wearables y accesorios O´Tech.
+                wearables y accesorios O'Tech.
               </Card.Text>
               <br></br>
               <br></br>
               <br></br>
               <Card.Link href="/">
-                <Button variant="dark">Clic Aquí</Button>{" "}
+                <Button variant="info">Clic Aquí</Button>{" "}
               </Card.Link>
             </Card.Body>
           </Card>
         </div>
           <h5 className="text-center mt-4">Seguinos en nuestras redes</h5>
             <div className="row justify-content-center my-3">
-                <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square socialicon"></i></a>
-                <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram socialicon"></i></a>
-                <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter socialicon"></i></a>
+            <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square socialicon"></i></a>
+                    <a href="https://www.instagram.com/rollingcodeschool/?hl=es-la" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram socialicon"></i></a>
+                    <a href="https://twitter.com/rollingcodeok?lang=es" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter socialicon"></i></a>
+                    <a href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt socialicon"></i></a>
             </div>
         <div className="mt-5">
           <h3 align="center">
@@ -133,7 +134,7 @@ export default function Contact({token, user, setToken}) {
             <Form.Label>Mensaje</Form.Label>
             <Form.Control as="textarea" rows={3} name="contenido" required  onChange={handleChange}/>
           </Form.Group>
-          <Button className="btnStyle2" type="submit">
+          <Button className="btn btn-info" type="submit">
             Enviar
           </Button>
         </Form>
