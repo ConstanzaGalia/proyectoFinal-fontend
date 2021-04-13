@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Form, Modal, Button, Table, Row, Card } from "react-bootstrap";
+import { Form, Modal, Button, Table, Row, } from "react-bootstrap";
 
 
 export default function AdmProductsList({ token, product }) {
@@ -91,15 +91,15 @@ export default function AdmProductsList({ token, product }) {
               <td className="text-center"> {p.description} </td>
               <td className="text-center">
 
-                <button onClick={() => deleteProduct(p._id)} type="button" class="btn btn-danger">
+                <button onClick={() => deleteProduct(p._id)} type="button" class="btn btn-outline-danger">
                   <i class="fas fa-trash-alt"></i>
                 </button>
 
-                <button onClick={() => updateProduct(p)} type="button" class="btn btn-secondary mx-2">
+                <button onClick={() => updateProduct(p)} type="button" class="btn btn-outline-info mx-2">
                   <i class="fas fa-edit"></i>
                 </button>
 
-                <button onClick={() => updateProduct(p)} type="button" class="btn btn-secondary">
+                <button onClick={() => updateProduct(p)} type="button" class="btn btn-outline-success">
                   <i class="fas fa-external-link-alt"></i>
                 </button>
 

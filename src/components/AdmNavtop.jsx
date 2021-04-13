@@ -7,7 +7,7 @@ export default function AdmNavtop() {
     };
   return (
     <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom p-5">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom p-5 navpaneladmin">
                 <h2 className="text-light">Panel de Administración</h2>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,7 +27,7 @@ export default function AdmNavtop() {
                     </ul>
                 </div>
 
-                <button onClick={handleLogOut} className="btn btn-secondary btn-back-login"><i className="fas fa-sign-out-alt"></i></button>
+                <button onClick={handleLogOut} className="btn btn-light btn-back-login"><i className="fas fa-sign-out-alt"></i></button>
             </nav>
     </div>
   )

@@ -20,13 +20,24 @@ export default function Products( {token, user, setToken} ) {
     return (
     <>
       <NavBar token={token} user={user} setToken={setToken} />
-        <Container className="my-5">
+
+        <div className="productsTitle ">
+            <Container>
+                <Row className='my-5'>
+                    <h3 className="titulos text-white">Nuestros Productos</h3>
+                </Row>
+            </Container>
+        </div>
+
+        <div className="backproducts p-5">
             <Row className="flex-row justify-content-center">
                 {products.map((p) => (
                     <CardProducts product={p} key={p._id} />
                 ))}
             </Row>
-        </Container>
+        </div>    
     </>
+   
+ 
     );
 }
