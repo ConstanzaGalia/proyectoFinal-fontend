@@ -12,7 +12,6 @@ export default function Products( {token, user, setToken} ) {
         const getProducts = async () => {
             const { data } = await axios.get('http://localhost:4000/api/products');
             setProducts(data);
-            console.log("🚀 ~ file: Productos.jsx ~ line 15 ~ getProducts ~ data", products)
         };
         getProducts();
     }, []);

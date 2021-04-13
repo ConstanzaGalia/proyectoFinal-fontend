@@ -9,12 +9,15 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+
+
 /* ESTILOS FOOTER */
 
 .backgrFooter{
   background-color: black;
   color: white;
-  height: 100px;
+  height: 150px;
 }
 
 .socialicon{

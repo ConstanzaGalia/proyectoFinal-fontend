@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Form, Modal, Button, Table, Row, } from "react-bootstrap";
+import { Form, Modal, Button, Table, Row, Card } from "react-bootstrap";
 
 
 export default function AdmProductsList({ token, product }) {
@@ -15,9 +15,10 @@ export default function AdmProductsList({ token, product }) {
   const [editProduct, setEditProduct] = useState({})
   const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
+  const [showProduct, setShowProduct] = useState(false);
   const [validated, setValidated] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleCloseProduct = () => setShowProduct(false);
   const getProducts = async () => {
     const headers = { "x-auth-token": token };
     const { data } = await axios.get("http://localhost:4000/api/products", {
@@ -38,6 +39,11 @@ export default function AdmProductsList({ token, product }) {
   const updateProduct = async (product) => {
     setEditProduct( product )
     setShow(true);
+  };
+
+  const showProductModal = async (product) => {
+    setEditProduct( product )
+    setShowProduct(true);
   };
 
   const handleSubmit = async (e) => {
@@ -88,19 +94,19 @@ export default function AdmProductsList({ token, product }) {
               <td className="text-center"> {p.brand} </td>
               <td className="text-center"> {p.category} </td>
               <td className="text-center"> {p.price} </td>
-              <td className="text-center"> {p.description} </td>
+              <td className="text-center w-25"> {p.description} </td>
               <td className="text-center">
 
                 <button onClick={() => deleteProduct(p._id)} type="button" class="btn btn-outline-danger">
                   <i class="fas fa-trash-alt"></i>
                 </button>
 
-                <button onClick={() => updateProduct(p)} type="button" class="btn btn-outline-info mx-2">
+                <button onClick={() => updateProduct(p)} type="button" class="btn btn-outline-info">
                   <i class="fas fa-edit"></i>
                 </button>
 
-                <button onClick={() => updateProduct(p)} type="button" class="btn btn-outline-success">
-                  <i class="fas fa-external-link-alt"></i>
+                <button onClick={() => showProductModal(p)} type="button" class="btn btn-outline-info">
+                  <i class="fas fa-edit"></i>
                 </button>
 
               </td>
@@ -209,6 +215,31 @@ export default function AdmProductsList({ token, product }) {
           </Button>
         </Modal.Footer>
       </Modal>
+
+      <Modal
+        show={showProduct}
+        onHide={handleCloseProduct}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>{editProduct.name}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Card.Img src={editProduct.image} />
+          {editProduct.description}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseProduct}>
+            Close
+          </Button>
+          <Button variant="primary">Understood</Button>
+        </Modal.Footer>
+      </Modal>
+
+
+    
+      
     </div>
   );
 }

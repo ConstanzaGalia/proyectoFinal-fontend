@@ -18,7 +18,7 @@ export default function Products( {token, user, setToken} ) {
 
   
   return (
-    <div className="sectionProduct my-5">
+    <div className="sectionProduct my-0">
         
         <Container className="my-5">
             <Row className='my-5'>
@@ -30,7 +30,7 @@ export default function Products( {token, user, setToken} ) {
                 )).slice(0,8)}
             </Row>
             <Row>
-                <Link to='/'>
+                <Link to='/productos'>
                     <Button className="my-5 justify-content-center btnStyle2">Ver mas</Button>
                 </Link>
             </Row>

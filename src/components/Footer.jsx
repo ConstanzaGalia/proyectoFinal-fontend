@@ -1,8 +1,7 @@
 export default function Footer() {
     return (
         <div className="container-fluid mt-auto mx-auto borderTop-div">
-            <h6 className="text-center mt-3">Recibimos todos los medios de pago</h6>
-            <div className="row">
+            <div className="row align-items-center mt-5">
                 <div className="col-lg-3 text-center">
                     <p className="ml-4">Depósito Bancario</p>
                     <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png"
@@ -15,6 +14,7 @@ export default function Footer() {
                         alt="" class="my-2 img-credit-card"></img>
                 </div>
                 <div className="col-lg-6 text-center">
+                    <p className="text-center">Recibimos todos los medios de pago</p>
                     <p className="text-center">Tarjetas de Crédito</p>
                     <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png"
                         alt="" className="my-2 img-credit-card"></img>
@@ -41,19 +41,34 @@ export default function Footer() {
                         alt="" className="my-2 img-credit-card"></img>
                 </div>
             </div>
-            <div className="row backgrFooter mt-2 justify-content-center align-content-center">
-                <p className="mr-3">
-                    Copyright © O'Tech 2021 - Todos los derechos reservados.
-                </p>
-                <a className="mr-3 text-white" href="/">
-                    Preguntas Frecuentes
-                </a>
-                <a className="mr-3 text-white" href="/">
-                    Terminos y Condiciones
-                </a>
-                <a className="mr-3 text-white" href="/">
-                    Politicas de Privacidad
-                </a>
+
+
+            <div className="row backgrFooter mt-3 justify-content-center align-content-center ">
+                <div className="row ml-auto">
+                    <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square socialicon"></i></a>
+                    <a href="https://www.instagram.com/rollingcodeschool/?hl=es-la" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram socialicon"></i></a>
+                    <a href="https://twitter.com/rollingcodeok?lang=es" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter socialicon"></i></a>
+                    <a href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt socialicon"></i></a>
+                </div>
+                <div className="d-flex flex-column align-items-center mx-auto">
+                    <p>
+                        © 2021 O'Tech
+                    </p>
+                    <p>
+                        Todos los derechos reservados.
+                    </p>
+                </div>
+                <div className="d-flex align-items-center flex-column mr-auto">
+                    <a className="text-white" href="/">
+                        Preguntas Frecuentes
+                    </a>
+                    <a className="text-white" href="/">
+                        Terminos y Condiciones
+                    </a>
+                    <a className="text-white" href="/">
+                        Politicas de Privacidad
+                    </a>
+                </div>
             </div>
         </div>
     );
