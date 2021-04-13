@@ -45,7 +45,7 @@ export default function Contact({token, user, setToken}) {
       <Container>
         <h1 align="center">Contáctanos</h1>
         <div className="d-flex flex-wrap mt-5 justify-content-between">
-          <Card style={{ width: "20rem" }}>
+          <Card style={{ width: "18rem" }}>
             <Card.Body>
               <Card.Title className="text-center"><i class="fas fa-phone-square-alt fontas"></i> Teléfonos</Card.Title>
 
@@ -70,7 +70,7 @@ export default function Contact({token, user, setToken}) {
               </Card.Text>
             </Card.Body>
           </Card>
-          <Card style={{ width: "20rem" }}>
+          <Card style={{ width: "18rem" }}>
             <Card.Body>
               <Card.Title className="text-center"><i class="fas fa-user-friends fontas"></i> Soporte presencial</Card.Title>
 
@@ -86,14 +86,13 @@ export default function Contact({token, user, setToken}) {
               </Card.Link>
             </Card.Body>
           </Card>
-          <Card style={{ width: "20rem" }}>
+          <Card style={{ width: "18rem" }}>
             <Card.Body>
               <Card.Title className="text-center"><i class="fas fa-shopping-cart fontas"></i> Tienda online O'Tech</Card.Title>
 
               <Card.Text className="text-justify">
                 Compra en línea los más novedosos watches y accesorios O'Tech.
               </Card.Text>
-              <br></br>
               <br></br>
               <br></br>
               <br></br>
