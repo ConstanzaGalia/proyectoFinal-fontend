@@ -1,3 +1,5 @@
+import iconcorto from '../Img/icon2blanco.PNG'
+
 export default function Footer() {
     return (
         <div className="container-fluid mt-auto mx-auto borderTop-div">
@@ -43,14 +45,19 @@ export default function Footer() {
             </div>
 
 
-            <div className="row backgrFooter mt-3 justify-content-center align-content-center ">
-                <div className="row ml-auto">
+            <div className="row backgrFooter mt-3 justify-content-around align-content-center ">
+                <div>
+                    <a href="/">
+                        <img src={iconcorto} alt="" width="65px"/>
+                    </a>
+                </div>
+                <div className="row">
                     <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square socialicon"></i></a>
                     <a href="https://www.instagram.com/rollingcodeschool/?hl=es-la" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram socialicon"></i></a>
                     <a href="https://twitter.com/rollingcodeok?lang=es" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter socialicon"></i></a>
                     <a href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt socialicon"></i></a>
                 </div>
-                <div className="d-flex flex-column align-items-center mx-auto">
+                <div className="d-flex flex-column align-items-center">
                     <p>
                         © 2021 O'Tech
                     </p>
@@ -58,7 +65,7 @@ export default function Footer() {
                         Todos los derechos reservados.
                     </p>
                 </div>
-                <div className="d-flex align-items-center flex-column mr-auto">
+                <div className="d-flex align-items-center flex-column">
                     <a className="text-white" href="/">
                         Preguntas Frecuentes
                     </a>
