@@ -15,9 +15,15 @@ useEffect(() => {
 }, []);
 
 const deleteMensaje = async (id) => {
-  const headers = { "x-auth-token": token };
-  await axios.delete(`http://localhost:4000/api/mensajes/${id}`, { headers });
-  getMensajes();
+
+  const confirm = window.confirm('¿Estas seguro que deseas eliminar el mensaje?')
+
+  if (confirm) {
+    const headers = { "x-auth-token": token };
+    await axios.delete(`http://localhost:4000/api/mensajes/${id}`, { headers });
+    getMensajes();
+  }
+
 };
 
   return (

@@ -1,22 +1,26 @@
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { Redirect } from "react-router"
 import NavBar from "../components/NavBar"
 import { beforeUpload, getBase64 } from '../utils';
 
 
-const exampleImage = 'https://img2.freepng.es/20180410/bbw/kisspng-avatar-user-medicine-surgery-patient-avatar-5acc9f7a7cb983.0104600115233596105109.jpg'
+export default function Profile({token, user, setToken, getApi }) {
 
 
-export default function Profile({token, user, setToken }) {
+  const [exampleImage, setExampleImage] = useState('https://img2.freepng.es/20180410/bbw/kisspng-avatar-user-medicine-surgery-patient-avatar-5acc9f7a7cb983.0104600115233596105109.jpg');
+
+
   if (!token) {
     return <Redirect to="/" />
   }
+
 
   const onChangeImg = async (e) => {
     const img = e.target.files[0];
     if (!beforeUpload(img)) return;
     const base64 = await getBase64(img);
-    console.log('onChangeImg - base64', base64);
+    setExampleImage(base64);
     axios
         .put(
             'http://localhost:4000/api/usuarios/usuarioLogueado',
@@ -25,8 +29,10 @@ export default function Profile({token, user, setToken }) {
                 headers: { 'x-auth-token': token },
             }
         )
-        .then((response) => console.log(response.data));
+        .then(() => getApi());
 };
+
+  
 
 
   return (
