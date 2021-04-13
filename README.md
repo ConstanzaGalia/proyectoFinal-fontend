@@ -1,70 +1,61 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# O´tech SmartWatches - E-commerce ⌚
 
-## Available Scripts
 
-In the project directory, you can run:
+_O´Tech es un e-commerce de venta de smartwatches realizada como proyecto final para el curso de programación web fullstack de Rolling Code School. Creada a partir de los requisitos solicitados por la academia para la aprobación del curso._
 
-### `npm start`
+---
+## Requisitos ⚙
+_El proyecto contiene lo siguiente:_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Landing Page: NavBar - Carousel - Dos secciones (una que lista los productos y otra que lista las marcas comercializadas) - Footer.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Página Sobre Nosotros.
 
-### `npm test`
+* Página de contacto.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Página de Productos.
 
-### `npm run build`
+* Sistema de login y register, con sus respectivas validaciones.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Pantalla de perfil de usuario.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Panel de administrador: ABM de Productos - Listados de Usuarios y Listado de mensajes recibidos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
+## Comenzando 🚀
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local._
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Instalación 🔧
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Se usará package manager [npm](https://www.npmjs.com/).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+git clone https://github.com/ConstanzaGalia/proyectoFinal-fontend.git
 
-## Learn More
+&& npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+&& npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+---
+## Construido con 🛠️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* [npm](https://www.npmjs.com/) - Manejador de paquetes.
+* [React](https://es.reactjs.org/) - Framework, comando npx create-react-app.
+* [React-bootstrap](https://react-bootstrap.github.io/) - El framework mas popular de fontend.
+* [React-Router-Dom](https://reactrouter.com/web/guides/quick-start) - Librería para el manejo de las rutas.
+* [axios](https://www.npmjs.com/package/axios) - Librería para hacer solicitudes HTTP.
 
-### Analyzing the Bundle Size
+---
+## Autores ✒️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+* **Juani Gramajo**  [Juani](https://github.com/juanigramajo)
+* **Paula Lazarte**  [Paula](https://github.com/Paulazarte)
+* **Constanza Galía Maldonado** [Constanza](https://github.com/ConstanzaGalia/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

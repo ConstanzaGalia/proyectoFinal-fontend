@@ -23,7 +23,6 @@ export default function AdmUsers({token}) {
                   <th>Nombre</th>
                   <th>Email</th>
                   <th>Rol</th>
-                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -33,7 +32,6 @@ export default function AdmUsers({token}) {
                       <td className="text-center"> {u.nombre} </td>
                       <td className="text-center"> {u.email} </td>
                       <td className="text-center"> {u.rol} </td>
-                      <td className="text-center"> <button type="button" class="btn btn-danger mr-2"><i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-secondary"><i class="fas fa-edit"></i></button></td>
                     </tr>
                   ))
                 }

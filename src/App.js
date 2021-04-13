@@ -45,7 +45,7 @@ function App() {
       <Router>
         <Switch>
         <Route path='/profile'>
-            <Profile user={ user } token={ token } setToken={ setToken }/>
+            <Profile getApi={getApi} user={ user } token={ token } setToken={ setToken }/>
           </Route>
           <Route path='/admin'>
             <Admin user={ user } token={ token } />

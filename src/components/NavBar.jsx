@@ -61,9 +61,6 @@ export default function NavBar({ token, user, setToken }) {
 
                 <Dropdown.Menu>
                   <Dropdown.Item href="/profile"><i class="fas fa-user"></i> Perfil</Dropdown.Item>
-                  <Dropdown.Item href="/">
-                  <i class="fas fa-shopping-cart"></i> Carrito
-                  </Dropdown.Item>
                   <Dropdown.Item href="#/action-3" onClick={handleLogOut}>
                   <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
                   </Dropdown.Item>

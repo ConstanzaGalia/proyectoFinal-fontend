@@ -7,7 +7,7 @@ import { beforeUpload, getBase64 } from '../utils';
 const exampleImage = 'https://img2.freepng.es/20180410/bbw/kisspng-avatar-user-medicine-surgery-patient-avatar-5acc9f7a7cb983.0104600115233596105109.jpg'
 
 
-export default function Profile({token, user, setToken}) {
+export default function Profile({token, user, setToken }) {
   if (!token) {
     return <Redirect to="/" />
   }
@@ -50,9 +50,6 @@ export default function Profile({token, user, setToken}) {
             </div>
 
             <hr className="my-5 hr-style"/>
-
-            <h3 className="my-5">Mi lista de Favoritos</h3>
-
       </div>
     </>
   )
