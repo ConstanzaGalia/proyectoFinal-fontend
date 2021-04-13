@@ -45,57 +45,59 @@ export default function Contact({token, user, setToken}) {
       <Container>
         <h1 align="center">Contáctanos</h1>
         <div className="d-flex flex-wrap mt-5 justify-content-between">
-          <Card style={{ width: "15rem" }}>
+          <Card style={{ width: "20rem" }}>
             <Card.Body>
-              <Card.Title>Teléfonos</Card.Title>
+              <Card.Title className="text-center"><i class="fas fa-phone-square-alt fontas"></i> Teléfonos</Card.Title>
 
               <Card.Text>
-                Tucumán: 0800-0101
+                <i class="fas fa-mobile-alt"></i><strong> Tucumán: </strong>0800-0101
                 <br></br>
-                Córdoba: 0800-1-726-7864
+                <i class="fas fa-mobile-alt"></i><strong> Córdoba: </strong>0800-1-726-7864
                 <br></br>
-                Buenos Aires: 0800-5077267
+                <i class="fas fa-mobile-alt"></i><strong> Buenos Aires: </strong>0800-5077267
                 <br></br>
-                Salta: 0800-279-19111
+                <i class="fas fa-mobile-alt"></i><strong> Salta: </strong>0800-279-19111
                 <br></br>
-                Misiones: 0800-0726-7864
+                <i class="fas fa-mobile-alt"></i><strong> Misiones: </strong>0800-0726-7864
                 <br></br>
-                Mendoza: 0800-299-0033
+                <i class="fas fa-mobile-alt"></i><strong> Mendoza: </strong> 0800-299-0033
                 <br></br>
-                Chubut: 0800-751-2676
+                <i class="fas fa-mobile-alt"></i><strong> Chubut: </strong> 0800-751-2676
                 <br></br>
-                Atención de 8:00 a 23:00 Hrs, Lunes a Domingo
+                Atención de 8:00 a 23:00 Hrs
+                <br></br>
+                Lunes a Domingo
               </Card.Text>
             </Card.Body>
           </Card>
-          <Card style={{ width: "15rem" }}>
+          <Card style={{ width: "20rem" }}>
             <Card.Body>
-              <Card.Title>Soporte presencial</Card.Title>
+              <Card.Title className="text-center"><i class="fas fa-user-friends fontas"></i> Soporte presencial</Card.Title>
 
-              <Card.Text>
+              <Card.Text className="text-justify">
                 Localiza los centros de servicio O'Tech más cercanos.
               </Card.Text>
               <br></br>
               <br></br>
               <br></br>
               <br></br>
-              <Card.Link href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018">
+              <Card.Link href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018" className="d-flex justify-content-center">
                 <Button variant="info">Clic Aquí</Button>{" "}
               </Card.Link>
             </Card.Body>
           </Card>
-          <Card style={{ width: "15rem" }}>
+          <Card style={{ width: "20rem" }}>
             <Card.Body>
-              <Card.Title>Tienda online O'Tech</Card.Title>
+              <Card.Title className="text-center"><i class="fas fa-shopping-cart fontas"></i> Tienda online O'Tech</Card.Title>
 
-              <Card.Text>
-                Compra en línea los más novedosos smartphones, tablets,
-                wearables y accesorios O'Tech.
+              <Card.Text className="text-justify">
+                Compra en línea los más novedosos watches y accesorios O'Tech.
               </Card.Text>
               <br></br>
               <br></br>
               <br></br>
-              <Card.Link href="/">
+              <br></br>
+              <Card.Link href="/" className="d-flex justify-content-center">
                 <Button variant="info">Clic Aquí</Button>{" "}
               </Card.Link>
             </Card.Body>
