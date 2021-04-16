@@ -88,7 +88,7 @@ export default function BotonCreateAccount( { setToken } ) {
                             </InputGroup>
                         </Form.Group>
                         <Button variant="info" type="submit">
-                            Guardar Cambios
+                            Crear Cuenta
                         </Button>
                     </Form>
                 </Modal.Body>
