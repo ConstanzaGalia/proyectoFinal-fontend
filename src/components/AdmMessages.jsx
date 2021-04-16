@@ -7,7 +7,7 @@ const [mensajes, setMensajes] = useState([]);
 
 const getMensajes = async () => {
   const headers = {'x-auth-token': token}
-  const { data } = await axios.get('http://localhost:4000/api/mensajes', {headers});
+  const { data } = await axios.get('mensajes', {headers});
   setMensajes(data);
 };
 useEffect(() => {
@@ -20,7 +20,7 @@ const deleteMensaje = async (id) => {
 
   if (confirm) {
     const headers = { "x-auth-token": token };
-    await axios.delete(`http://localhost:4000/api/mensajes/${id}`, { headers });
+    await axios.delete(`mensajes/${id}`, { headers });
     getMensajes();
   }
 

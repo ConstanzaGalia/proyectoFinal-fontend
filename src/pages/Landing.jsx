@@ -6,9 +6,8 @@ import SamsungW from '../components/SamsungW'
 import SectionProducts from '../components/SectionProducts'
 import SuuntoWatch from '../components/SuuntoWatch'
 import GarminW from '../components/GarminW'
-import { Container, Row } from 'react-bootstrap'
+import { Container} from 'react-bootstrap'
 import giflanding from '../Img/landing.gif'
-import { Link } from 'react-router-dom';
 import scroll from '../Img/scroll.gif'
 import '../css/landing.css'
 

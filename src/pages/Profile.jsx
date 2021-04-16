@@ -23,7 +23,7 @@ export default function Profile({token, user, setToken, getApi }) {
     setExampleImage(base64);
     axios
         .put(
-            'http://localhost:4000/api/usuarios/usuarioLogueado',
+            'usuarios/usuarioLogueado',
             { imagen: base64 },
             {
                 headers: { 'x-auth-token': token },

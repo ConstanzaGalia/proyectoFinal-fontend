@@ -23,7 +23,7 @@ export default function BotonCreateAccount( { setToken } ) {
         }
 
         try {
-            const { data } = await axios.post('http://localhost:4000/api/usuarios', input);
+            const { data } = await axios.post('usuarios', input);
             console.log(data)
             setStorage('token', data);
             setToken(data);

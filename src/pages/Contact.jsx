@@ -20,7 +20,7 @@ export default function Contact({token, user, setToken}) {
     try {
       console.log("🚀 ~ file: FormProducts.jsx ~ line 19 ~ handleSubmit ~ input", input)
       const headers = { "x-auth-token": token };
-      const response = await axios.post("http://localhost:4000/api/mensajes", input, {
+      const response = await axios.post("mensajes", input, {
         headers,
       });
       console.log("🚀 ~ file: FormProducts.jsx ~ line 21 ~ handleSubmit ~ response", response)

@@ -21,7 +21,7 @@ export default function AdmProductsList({ token, product }) {
   const handleCloseProduct = () => setShowProduct(false);
   const getProducts = async () => {
     const headers = { "x-auth-token": token };
-    const { data } = await axios.get("http://localhost:4000/api/products", {
+    const { data } = await axios.get("products", {
       headers,
     });
     setProducts(data);
@@ -32,7 +32,7 @@ export default function AdmProductsList({ token, product }) {
 
   const deleteProduct = async (id) => {
     const headers = { "x-auth-token": token };
-    await axios.delete(`http://localhost:4000/api/products/${id}`, { headers });
+    await axios.delete(`products/${id}`, { headers });
     getProducts();
   };
 
@@ -56,7 +56,7 @@ export default function AdmProductsList({ token, product }) {
 
     try {
       const headers = { "x-auth-token": token };
-    await axios.put(`http://localhost:4000/api/products/${editProduct.id}`, editProduct, {headers});
+    await axios.put(`products/${editProduct.id}`, editProduct, {headers});
     getProducts();
     setShow(false)
 

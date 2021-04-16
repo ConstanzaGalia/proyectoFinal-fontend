@@ -29,7 +29,7 @@ export default function BotonInicioSesion({ setToken, user}) {
             return e.stopPropagation();
         }
         try {
-            const { data } = await axios.post('http://localhost:4000/api/auth/login', input);
+            const { data } = await axios.post('auth/login', input);
             console.log("🚀 ~ file: BotonInicioSesion.jsx ~ line 36 ~ handleSubmit ~ data", data)
             setStorage('token', data);
             setToken(data);

@@ -11,7 +11,8 @@ import Contact from './pages/Contact';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Profile from './pages/Profile';
-import SNC from './components/SNC'
+//BaseURL
+axios.defaults.baseURL = 'http://localhost:4000/api/'
 
 
 
@@ -31,7 +32,7 @@ function App() {
     const getApi = async () => {
         try {
             const headers = { 'x-auth-token': token };
-            const { data } = await axios.get('http://localhost:4000/api/usuarios/usuarioLogueado', {
+            const { data } = await axios.get('usuarios/usuarioLogueado', {
                 headers,
             });
             setUser(data);

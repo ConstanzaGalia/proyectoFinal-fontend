@@ -7,7 +7,7 @@ export default function AdmUsers({token}) {
   useEffect(() => {
     const getUsers = async () => {
       const headers = {'x-auth-token': token}
-      const { data } = await axios.get('http://localhost:4000/api/usuarios', {headers});
+      const { data } = await axios.get('usuarios', {headers});
       setUsers(data);
     };
     getUsers();

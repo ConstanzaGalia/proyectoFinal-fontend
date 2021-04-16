@@ -10,7 +10,7 @@ export default function Products( {token, user, setToken} ) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
       const getProducts = async () => {
-          const { data } = await axios.get('http://localhost:4000/api/products');
+          const { data } = await axios.get('products');
           setProducts(data);
       };
       getProducts();
