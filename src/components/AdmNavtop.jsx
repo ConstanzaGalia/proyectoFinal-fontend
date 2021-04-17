@@ -26,7 +26,6 @@ export default function AdmNavtop() {
                         </li>
                     </ul>
                 </div>
-
                 <button onClick={handleLogOut} className="btn btn-light btn-back-login"><i className="fas fa-sign-out-alt"></i></button>
             </nav>
     </div>
