@@ -58,4 +58,9 @@ git clone https://github.com/ConstanzaGalia/proyectoFinal-fontend.git
 * **Paula Lazarte**  [Paula](https://github.com/Paulazarte)
 * **Constanza Galía Maldonado** [Constanza](https://github.com/ConstanzaGalia/)
 
+---
+## Credenciales panel admin 🔑
+Para ingresar al panel admin y probar las funcionalidades se establecen las siguientes credenciales:
 
+* Usuario: admin@admin.com
+* Password: admin123
