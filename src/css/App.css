@@ -130,10 +130,11 @@ body {
   background-size: cover;
 }
 
-.sideBar {
+.bg-sidebar {
   background-image: url(../Img/sidepaneladmin.JPEG);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 709px;
 }
 
 
