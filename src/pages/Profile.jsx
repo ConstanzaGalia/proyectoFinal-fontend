@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Redirect } from "react-router"
 import NavBar from "../components/NavBar"
 import { beforeUpload, getBase64 } from '../utils';
