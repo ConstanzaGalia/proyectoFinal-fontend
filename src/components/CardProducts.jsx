@@ -10,9 +10,9 @@ export default function CardProducts( {product} ) {
 
   return (
     <div>
-      <Card className="m-3" style={{ width: "18rem", height: "27rem"}}>
+      <Card className="m-3" style={{ width: "18rem", maxHeight: "27rem"}}>
         <Card.Title className="m-2 text-center">{product.name}</Card.Title>
-        <Card.Img src={product.image} />
+        <Card.Img src={product.image} className="limit-height" />
         <Card.Body className="d-flex flex-column">
           <div className="mb-1">
             <Button variant="outline-secondary" className="w-100" disabled> ${product.price}</Button>

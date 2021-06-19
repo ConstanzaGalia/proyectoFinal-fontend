@@ -10,6 +10,8 @@ import NavBar from "../components/NavBar";
 export default function Contact({token, user, setToken}) {
   const [validated, setValidated] = useState(false);
   const [input, setInput] = useState({});
+  
+  
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
     event.preventDefault();
@@ -18,12 +20,10 @@ export default function Contact({token, user, setToken}) {
       return event.stopPropagation();
     }
     try {
-      console.log("🚀 ~ file: FormProducts.jsx ~ line 19 ~ handleSubmit ~ input", input)
       const headers = { "x-auth-token": token };
       const response = await axios.post("mensajes", input, {
         headers,
       });
-      console.log("🚀 ~ file: FormProducts.jsx ~ line 21 ~ handleSubmit ~ response", response)
       alert("Mensaje enviado.");
     } catch (error) {
       console.log(error);
@@ -47,22 +47,22 @@ export default function Contact({token, user, setToken}) {
         <div className="d-flex flex-wrap mt-5 justify-content-between">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Title className="text-center"><i class="fas fa-phone-square-alt fontas"></i> Teléfonos</Card.Title>
+              <Card.Title className="text-center"><i className="fas fa-phone-square-alt fontas"></i> Teléfonos</Card.Title>
 
               <Card.Text>
-                <i class="fas fa-mobile-alt"></i><strong> Tucumán: </strong>0800-0101
+                <i className="fas fa-mobile-alt"></i><strong> Tucumán: </strong>0800-0101
                 <br></br>
-                <i class="fas fa-mobile-alt"></i><strong> Córdoba: </strong>0800-1-726-7864
+                <i className="fas fa-mobile-alt"></i><strong> Córdoba: </strong>0800-1-726-7864
                 <br></br>
-                <i class="fas fa-mobile-alt"></i><strong> Buenos Aires: </strong>0800-5077267
+                <i className="fas fa-mobile-alt"></i><strong> Buenos Aires: </strong>0800-5077267
                 <br></br>
-                <i class="fas fa-mobile-alt"></i><strong> Salta: </strong>0800-279-19111
+                <i className="fas fa-mobile-alt"></i><strong> Salta: </strong>0800-279-19111
                 <br></br>
-                <i class="fas fa-mobile-alt"></i><strong> Misiones: </strong>0800-0726-7864
+                <i className="fas fa-mobile-alt"></i><strong> Misiones: </strong>0800-0726-7864
                 <br></br>
-                <i class="fas fa-mobile-alt"></i><strong> Mendoza: </strong> 0800-299-0033
+                <i className="fas fa-mobile-alt"></i><strong> Mendoza: </strong> 0800-299-0033
                 <br></br>
-                <i class="fas fa-mobile-alt"></i><strong> Chubut: </strong> 0800-751-2676
+                <i className="fas fa-mobile-alt"></i><strong> Chubut: </strong> 0800-751-2676
                 <br></br>
                 Atención de 8:00 a 23:00 Hrs
                 <br></br>
@@ -72,7 +72,7 @@ export default function Contact({token, user, setToken}) {
           </Card>
           <Card style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Title className="text-center"><i class="fas fa-user-friends fontas"></i> Soporte presencial</Card.Title>
+              <Card.Title className="text-center"><i className="fas fa-user-friends fontas"></i> Soporte presencial</Card.Title>
 
               <Card.Text className="text-justify">
                 Localiza los centros de servicio O'Tech más cercanos.
@@ -88,7 +88,7 @@ export default function Contact({token, user, setToken}) {
           </Card>
           <Card style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Title className="text-center"><i class="fas fa-shopping-cart fontas"></i> Tienda online O'Tech</Card.Title>
+              <Card.Title className="text-center"><i className="fas fa-shopping-cart fontas"></i> Tienda online O'Tech</Card.Title>
 
               <Card.Text className="text-justify">
                 Compra en línea los más novedosos watches y accesorios O'Tech.
@@ -107,7 +107,7 @@ export default function Contact({token, user, setToken}) {
             <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square socialicon"></i></a>
                     <a href="https://www.instagram.com/rollingcodeschool/?hl=es-la" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram socialicon"></i></a>
                     <a href="https://twitter.com/rollingcodeok?lang=es" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter socialicon"></i></a>
-                    <a href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt socialicon"></i></a>
+                    <a href="https://www.google.com/maps/place/RollingCode+School/@-26.8367009,-65.2093905,17z/data=!3m1!4b1!4m5!3m4!1s0x94225d3ad7f30f1d:0xf8606cd659b8e3e4!8m2!3d-26.8367009!4d-65.2072018" target="_blank" rel="noopener noreferrer"><i className="fas fa-map-marker-alt socialicon"></i></a>
             </div>
         <div className="mt-5">
           <h3 align="center">

@@ -121,6 +121,9 @@ body {
   background-image: url(https://image.freepik.com/foto-gratis/pared-ladrillo-negro-textura-fondo_53876-63572.jpg);
 }
 
+.limit-height {
+  max-height: 17.8rem;
+}
 
 
 /* NAV PANEL ADMIN */

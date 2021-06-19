@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import { Form, Modal, InputGroup } from "react-bootstrap";
+import { Form, Modal, InputGroup, Alert } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 import { setStorage } from "../utils";
@@ -8,11 +8,11 @@ import { setStorage } from "../utils";
 
 export default function BotonInicioSesion({ setToken, user}) {
     const [show, setShow] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+    const [errorAlert, setErrorAlert] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     const [input, setInput] = useState({ email: '', password: '' });
-
     const [validated, setValidated] = useState(false);
 
     const handleChange = (e) =>{
@@ -30,10 +30,13 @@ export default function BotonInicioSesion({ setToken, user}) {
         }
         try {
             const { data } = await axios.post('auth/login', input);
-            console.log("🚀 ~ file: BotonInicioSesion.jsx ~ line 36 ~ handleSubmit ~ data", data)
-            setStorage('token', data);
-            setToken(data);
+                setShowAlert(true);
+            setTimeout(() => {
+                setStorage('token', data);
+                setToken(data);
+            },1500)
         } catch (error) {
+            setErrorAlert(true);
             console.log(error);
         }
 
@@ -44,12 +47,18 @@ export default function BotonInicioSesion({ setToken, user}) {
         <div>
             <Button className="btnStyle2" onClick={handleShow}>Iniciar Sesión</Button>
 
-            <Modal show={show} onHide={handleClose} >
+            <Modal show={show}>
                 <Modal.Header closeButton>
                     <Modal.Title>Inicio Sesión</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                    {
+                        showAlert ? <Alert variant="success">Bienvenido/a a O´tech</Alert> : null
+                    }
+                    {
+                        errorAlert ? <Alert variant="danger">Usuario o contraseña incorrecta</Alert> : null
+                    }
                         <Form.Group controlId="validationCustom02">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control 
@@ -58,7 +67,6 @@ export default function BotonInicioSesion({ setToken, user}) {
                             placeholder="Email" 
                             required 
                             onChange={handleChange} />
-                        <Form.Control.Feedback>Email Válido!</Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group controlId="validationCustomUsername">
                             <Form.Label>Password</Form.Label>

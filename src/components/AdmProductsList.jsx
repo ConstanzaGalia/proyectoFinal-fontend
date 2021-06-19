@@ -4,14 +4,6 @@ import { Form, Modal, Button, Table, Row, Card } from "react-bootstrap";
 
 
 export default function AdmProductsList({ token, product }) {
-  const [input, setInput] = useState({
-    name: "",
-    image: "",
-    brand: "",
-    price: "",
-    category: "",
-    description: "",
-  });
   const [editProduct, setEditProduct] = useState({})
   const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
@@ -97,16 +89,16 @@ export default function AdmProductsList({ token, product }) {
               <td className="text-center w-25"> {p.description} </td>
               <td className="text-center">
 
-                <button onClick={() => deleteProduct(p._id)} type="button" class="btn btn-outline-danger">
-                  <i class="fas fa-trash-alt"></i>
+                <button onClick={() => deleteProduct(p._id)} type="button" className="btn btn-outline-danger">
+                  <i className="fas fa-trash-alt"></i>
                 </button>
 
-                <button onClick={() => updateProduct(p)} type="button" class="btn btn-outline-secondary">
-                  <i class="fas fa-edit"></i>
+                <button onClick={() => updateProduct(p)} type="button" className="btn btn-outline-secondary">
+                  <i className="fas fa-edit"></i>
                 </button>
 
-                <button onClick={() => showProductModal(p)} type="button" class="btn btn-outline-info">
-                <i class="fas fa-archive"></i>
+                <button onClick={() => showProductModal(p)} type="button" className="btn btn-outline-info">
+                <i className="fas fa-archive"></i>
                 </button>
 
               </td>

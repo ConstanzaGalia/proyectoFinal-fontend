@@ -30,15 +30,15 @@ export default function Landing( {token, user, setToken} ) {
             </div>
 
             <div className="col-md-3 text-center mt-5">
-              <img src={giflanding} class="static imglanding" alt=""/>
+              <img src={giflanding} className="static imglanding" alt=""/>
               
-              <img src={giflanding} class="active imglanding" alt=""/>
+              <img src={giflanding} className="active imglanding" alt=""/>
             </div>
           </div>
 
           <div className="">
               <a href="#carousel">
-                <img src={scroll} class="imgscroll" alt=""/>
+                <img src={scroll} className="imgscroll" alt=""/>
               </a>
           </div>
         </div>

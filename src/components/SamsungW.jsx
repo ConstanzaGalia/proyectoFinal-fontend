@@ -29,9 +29,9 @@ export default function SamsungW() {
             className="videoYoutube"
             src="https://www.youtube.com/embed/P4YuzFSIbJM"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </div>

@@ -48,8 +48,8 @@ const deleteMensaje = async (id) => {
                       <td className="text-center"> {m.tipo} </td>
                       <td className="text-center"> {m.contenido} </td>
                       <td className="text-center">
-                      <button onClick={() => deleteMensaje(m._id)} type="button" class="btn btn-danger">
-                        <i class="fas fa-trash-alt"></i>
+                      <button onClick={() => deleteMensaje(m._id)} type="button" className="btn btn-danger">
+                        <i className="fas fa-trash-alt"></i>
                       </button>
                       </td>
                     </tr>

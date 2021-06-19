@@ -17,8 +17,6 @@ export default function NavBar({ token, user, setToken }) {
     return <Redirect to='/admin' />
   }
 
-
-
   const handleLogOut = () => {
     localStorage.removeItem("token");
     history.push("/");
@@ -60,9 +58,9 @@ export default function NavBar({ token, user, setToken }) {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="/profile"><i class="fas fa-user"></i> Perfil</Dropdown.Item>
+                  <Dropdown.Item href="/profile"><i className="fas fa-user"></i> Perfil</Dropdown.Item>
                   <Dropdown.Item href="#/action-3" onClick={handleLogOut}>
-                  <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                  <i className="fas fa-sign-out-alt"></i> Cerrar Sesión
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

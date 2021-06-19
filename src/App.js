@@ -1,4 +1,3 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 import Landing from './pages/Landing';
@@ -15,14 +14,9 @@ import Profile from './pages/Profile';
 // axios.defaults.baseURL = 'http://localhost:4000/api/'
 axios.defaults.baseURL = 'https://api-rest-otech.herokuapp.com/api/'
 
-
-
-
-
-
 function App() {
 
-  const [token, setToken] = useState(localStorage.getItem('token'));
+    const [token, setToken] = useState(localStorage.getItem('token'));
     const [user, setUser] = useState({});
 
     useEffect(() => {
